@@ -129,253 +129,79 @@
       </tr>
     </tbody></table>
 
-     <!-- <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;"><tbody>
-        <tr onmouseout="mip360_stop()" onmouseover="mip360_start()"  bgcolor="#ffffd0">
-          <td style="padding:20px;width:25%;vertical-align:middle">
-            <div class="one">
-              <div class="two" id='mip360_image'><video  width=100% height=100% muted autoplay loop>
-              <source src="images/mip360_sat.mp4" type="video/mp4">
-              Your browser does not support the video tag.
-              </video></div>
-              <img src='images/mip360_sat.jpg' width="160">
-            </div>
-            <script type="text/javascript">
-              function mip360_start() {
-                document.getElementById('mip360_image').style.opacity = "1";
-              }
+    <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;"><tbody></tbody>
+      <tr onmouseout="huaweirobot_stop()" onmouseover="huaweirobot_stop()" > <!-- bgcolor="#ffffd0" --> 
+        <td style="padding:20px;width:25%;vertical-align:middle">
+          <div class="one">
+            <div class="two" id='huaweirobot_image'><video  width=100% height=100% muted autoplay loop>
+            <source src="research/huaweiROBOT.png" type="video/png">
+            Your browser does not support the video tag.
+            </video></div>
+            <img src='research/huaweiROBOT.png' width="160">
+          </div>
+          <script type="text/javascript">
+            function huaweirobot_start() {
+              document.getElementById('huaweirobot_image').style.opacity = "1";
+            }
 
-              function mip360_stop() {
-                document.getElementById('mip360_image').style.opacity = "0";
-              }
-              mip360_stop()
-            </script>
-          </td>
-          <td style="padding:20px;width:75%;vertical-align:middle">
-            <a href="http://jonbarron.info/mipnerf360">
-              <papertitle>Mip-NeRF 360: Unbounded Anti-Aliased Neural Radiance Fields</papertitle>
-            </a>
-            <br>
-            <strong>Jonathan T. Barron</strong>,
-            <a href="https://bmild.github.io/">Ben Mildenhall</a>,
-            <a href="https://scholar.harvard.edu/dorverbin/home">Dor Verbin</a>,
-            <a href="https://pratulsrinivasan.github.io/">Pratul Srinivasan</a>,
-            <a href="https://phogzone.com/">Peter Hedman</a>
-            <br>
-            <em>arXiv</em>, 2021
-            <br>
-            <a href="http://jonbarron.info/mipnerf360">project page</a>
-            /
-            <a href="https://arxiv.org/abs/2111.12077">arXiv</a>
-            /
-            <a href="https://youtu.be/zBSH-k9GbV4">video</a>
-            <p></p>
-            <p>mip-NeRF can be extended to produce realistic results on unbounded scenes.</p>
-          </td>
-        </tr> 
+            function huaweirobot_stop() {
+              document.getElementById('huaweirobot_image').style.opacity = "0";
+            }
+            huaweirobot_stop()
+          </script>
+        </td>
+        <td style="padding:20px;width:75%;vertical-align:middle">
+          <a href="https://github.com/490CAD/HUAWEIRobot">
+            <span class="papertitle">HUAWEIRobot planning for CodeCraft</span>
+          </a>
+          <br>
+          <strong>Nan Wang</strong>,
+          <a href="https://micro-han.github.io/">Xiaohan Yan</a>,
+          <a>Xiaowei Song</a>
+          <br>
+          <em>CodeCraft</em>, 2023
+          <br>
+          <a href="https://github.com/490CAD/HUAWEIRobot">code</a>
+          <p></p>
+          <p>
+            This project is about HUAWEI robots application, the project requires us to assign policies, control scheduling, and path planning for multiple robots in a single map.<br>
+          </p>
+        </td>
+      </tr>
+    </tbody></table>
     
 
-        <tr onmouseout="urf_stop()" onmouseover="urf_start()">
-          <td style="padding:20px;width:25%;vertical-align:middle">
-            <div class="one">
-              <div class="two" id='urf_image'><video  width=100% height=100% muted autoplay loop>
-              <source src="images/urf.mp4" type="video/mp4">
-              Your browser does not support the video tag.
-              </video></div>
-              <img src='images/urf.jpg' width="160">
-            </div>
-            <script type="text/javascript">
-              function urf_start() {
-                document.getElementById('urf_image').style.opacity = "1";
-              }
-
-              function urf_stop() {
-                document.getElementById('urf_image').style.opacity = "0";
-              }
-              urf_stop()
-            </script>
-          </td>
-
-          <td style="padding:20px;width:75%;vertical-align:middle">
-            <a href="http://www.matthewtancik.com/nerf">
-              <papertitle>NeRF: Representing Scenes as Neural Radiance Fields for View Synthesis</papertitle>
-            </a>
-            <br>
-            <a href="https://bmild.github.io/">Ben Mildenhall*</a>,
-            <a href="https://pratulsrinivasan.github.io/">Pratul Srinivasan*</a>,
-            <a href="http://matthewtancik.com/">Matthew Tancik*</a>, <br>
-            <strong>Jonathan T. Barron</strong>,
-            <a href="http://cseweb.ucsd.edu/~ravir/">Ravi Ramamoorthi</a>,
-            <a href="https://www2.eecs.berkeley.edu/Faculty/Homepages/yirenng.html">Ren Ng</a>
-            <br>
-            <em>ECCV</em>, 2020 &nbsp <font color="red"><strong>(Oral Presentation, Best Paper Honorable Mention, CACM Research Highlight)</strong></font>
-            <br>
-            <a href="http://www.matthewtancik.com/nerf">project page</a>
-            /
-            <a href="https://arxiv.org/abs/2003.08934">arXiv</a>
-            /
-            <a href="https://www.youtube.com/watch?v=LRAqeM8EjOo&t">talk video</a>
-            /
-            <a href="https://www.youtube.com/watch?v=JuH79E8rdKc">supp video</a>
-            /
-            <a href="https://github.com/bmild/nerf">code</a>
-            /
-            <a href="https://cacm.acm.org/magazines/2022/1/257450-nerf/fulltext">CACM</a> <a href="https://cacm.acm.org/magazines/2022/1/257453-technical-perspective-neural-radiance-fields-explode-on-the-scene/fulltext">(foreward)</a>
-            <p></p>
-            <p>
-            Training a tiny non-convolutional neural network to reproduce a scene using volume rendering achieves photorealistic view synthesis.</p>
-          </td>
-        </tr> 
-      </tbody></table> -->
-
-      <!-- <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;"><tbody>
-        <tr>
+    <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;"><tbody>
+      <tr>
         <td style="padding:20px;width:100%;vertical-align:middle">
-          <heading>Conference Proceedings</heading>
+          <heading>Misc</heading>
         </td>
-        </tr>
-      </tbody></table>
-      <table style="padding-left:20px;width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;"><tbody>
-        <tr>
-          <td>
-            Not yet.😭
-          </td>
-        </tr>
-      </tbody></table> -->
-
-      <!-- <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;"><tbody>
-        <tr>
-        <td style="padding:20px;width:100%;vertical-align:middle">
-          <heading>Academic Journals</heading>
+      </tr>
+    </tbody></table>
+    <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;"><tbody>
+      <!-- write Misc here -->
+      <tr>
+        <td style=padding:00px;width:22%;vertical-align:middle;padding-left:20px>
+          Music🎶:
+          <br> &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+          I like playing the piano🎹 and have obtained certification in piano grade 10 from <a href="https://www.shcmusic.edu.cn/main.htm">Shanghai Conservatory of Music</a>.
+          <br><br>
+          Sports🏃‍♂️:
+          <br> &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+          I like playing basketball🏀 and I am a fun of NBA star Paul George. 
+          <br> &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+          badminton🏸, swim🏊‍♂️ and etc.
         </td>
-        </tr>
-      </tbody></table>
-      <table style="padding-left:20px;width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;"><tbody>
-        <tr>
-          <td>
-            Not yet.😭
-          </td>
-        </tr>
-      </tbody></table> -->
+      </tr>
+    </tbody></table>
 
-      <!-- <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;"><tbody>
-        <tr>
-        <td style="padding:20px;width:100%;vertical-align:middle">
-          <heading>Preprints</heading>
-        </td>
-        </tr>
-      </tbody></table>
-      <table style="padding-left:20px;width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;"><tbody>
-        <tr>
-          <td>
-            Not yet.😭
-          </td>
-        </tr>
-      </tbody></table> -->
-      <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;"><tbody>
-        <tr>
-        <td style="padding:20px;width:100%;vertical-align:middle">
-          <heading>Projects</heading>
-        </td>
-        </tr>
-      </tbody></table>
-      <table style="padding-left:20px;width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;">
-        <tbody>
-        <!-- write Projects here -->
-          <!-- <td style="padding:20px;width:25%;vertical-align:middle">
-              <img src='space_object_detection\images\tmp9j45l_2k.PNG' width="160">
-          </td> -->
-
-          <td style="padding:20px;width:75%;vertical-align:middle">
-              <papertitle>not yet 😭</papertitle>
-            </a>           
-            <p>
-              coming soon
-              <!-- <br><a href="https://github.com/fusheng-ji/space_object_detection">code</a> | 2023.05 -->
-            </p>
-          </td>
-      </tbody></table>
-      <!-- <table style="padding-left:20px;width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;">
-        <tbody> -->
-        <!-- write Projects here -->
-          <!-- <td style="padding:20px;width:25%;vertical-align:middle">
-              <img src='coor_mlps/images/ff_20pi_800_1024.png' width="160">
-          </td>
-
-          <td style="padding:20px;width:75%;vertical-align:middle">
-              <papertitle>Coordinate based MLPs</papertitle>
-            </a>           
-            <p>
-              A tiny non-convolutional neural network for fitting image signals with different activation functions and positional encoding methods.
-              <br><a href="https://github.com/fusheng-ji/Coordinate_based_MLPs">code</a> | 2022.07
-            </p>
-          </td>
-      </tbody></table> -->
-
-
-      <!-- <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;"><tbody>
-        <tr>
-        <td style="padding:20px;width:100%;vertical-align:middle">
-          <heading>Professional Services</heading>
-        </td>
-        </tr>
-      </tbody></table>
-      <table style="padding-left:20px;width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;"><tbody>
-        <tr>
-          <td>
-          • Conference Reviewer: CVPR, ICCV, ECCV, ICLR, AAAI
-          <br>
-          • Journal Reviewer: IJCV, IEEE-RAL, PR 
-          Not yet.😭
-          </td>
-        </tr>
-      </tbody></table> -->
-       
-      <!-- <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;"><tbody>
-        <tr>
-        <td style="padding:20px;width:100%;vertical-align:middle">
-          <heading>Teaching Experiences</heading>
-        </td>
-        </tr>
-      </tbody></table>
-      <table style="padding-left:20px;width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;"><tbody>
-        <tr>
-          <td>
-            Not yet.😭
-          </td>
-        </tr>
-      </tbody></table> -->
-
-      <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;"><tbody>
-        <tr>
-          <td style="padding:20px;width:100%;vertical-align:middle">
-            <heading>Mics</heading>
-          </td>
-        </tr>
-      </tbody></table>
-      <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;"><tbody>
-        <!-- write Mics here -->
-        <tr>
-          <td style=padding:00px;width:22%;vertical-align:middle;padding-left:20px>
-            Music🎶:
-            <br> &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
-            I like playing the piano🎹 and have obtained certification in piano grade 10 from <a href="https://www.shcmusic.edu.cn/main.htm">Shanghai Conservatory of Music</a>.
-            <br><br>
-            Sports🏃‍♂️:
-            <br> &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
-            I like playing basketball🏀 and I am a fun of NBA star Paul George. 
-            <br> &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
-            badminton🏸, swim🏊‍♂️ and etc.
-          </td>
-        </tr>
-      </tbody></table>
-
-      <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;"><tbody>
-        <tr>
-        <td style="padding:20px;width:100%;vertical-align:middle;text-align: right;">
-          Last updated on 2023/07/25
-        </td>
-        </tr>
-      </tbody></table>
+    <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;"><tbody>
+      <tr>
+      <td style="padding:20px;width:100%;vertical-align:middle;text-align: right;">
+        Last updated on 2023/07/25
+      </td>
+      </tr>
+    </tbody></table>
 </body>
 
 </html>
