@@ -37,7 +37,7 @@
               </p>
             </td>
             <td style="padding:2.5%;width:40%;max-width:40%">
-              <a href="images/wn.jpg"><img style="width:100%;max-width:100%" alt="profile photo" src="images/wn.jpg" class="hoverZoomLink"></a>
+              <a href="images/wn1.png"><img style="width:100%;max-width:100%" alt="profile photo" src="images/wn1.png" class="hoverZoomLink"></a>
             </td>
           </tr>
         </tbody></table>
@@ -131,6 +131,50 @@
 
     <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;"><tbody></tbody>
       
+      <!-- Gaussian splatting -->
+      <tr onmouseout="gs_stop()" onmouseover="gs_stop()" bgcolor="#ffffd0"> <!-- bgcolor="#ffffd0" --> 
+        <td style="padding:20px;width:25%;vertical-align:middle">
+          <div class="one">
+            <div class="two" id='gs_image'><video  width=100% height=100% muted autoplay loop>
+            <source src="research/gs.png" type="video/png">
+            Your browser does not support the video tag.
+            </video></div>
+            <img src='research/gs.png' width="160">
+          </div>
+          <script type="text/javascript">
+            function gs_start() {
+              document.getElementById('gs_image').style.opacity = "1";
+            }
+
+            function gs_stop() {
+              document.getElementById('gs_image').style.opacity = "0";
+            }
+            gs_stop()
+          </script>
+        </td>
+        
+        <td style="padding:20px;width:75%;vertical-align:middle">
+          <a href="https://github.com/BigCiLeng/GeoGS">
+            <span class="papertitle">3D Gaussian Splatting - rendering work</span>
+          </a>
+          <br>
+          <strong><em>Nan Wang</em></strong>,
+          <br>
+          2023/11
+          <br>
+          <a href="https://github.com/BigCiLeng/GeoGS"><em>code</em></a>
+          /
+          <a href="https://bigcileng.github.io/render_arts/index.html"><em>project</em></a>
+          <p></p>
+          <p>
+            During the time I am doing my work based on <a href="https://repo-sam.inria.fr/fungraph/3d-gaussian-splatting/">3D Gaussian Splatting</a>, I use it to reconstruct some scene taken by myself. Here are four scenes taken at Guangfulin, a beautiful park in Songjiang District, Shanghai, China. Artifacts from the Zhou Dynasty have also been unearthed at the site.
+          </p>
+        </td>
+      </tr>
+
+
+
+
       <!-- STEM EXAM -->
       <tr onmouseout="stemExam_stop()" onmouseover="stemExam_stop()" > <!-- bgcolor="#ffffd0" --> 
         <td style="padding:20px;width:25%;vertical-align:middle">
