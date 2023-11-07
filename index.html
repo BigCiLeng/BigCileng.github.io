@@ -139,7 +139,7 @@
             <source src="research/gs.png" type="video/png">
             Your browser does not support the video tag.
             </video></div>
-            <img src='research/gs.png' width="160">
+            <img src='research/gs.png' width="160" height="160">
           </div>
           <script type="text/javascript">
             function gs_start() {
@@ -154,7 +154,7 @@
         </td>
         
         <td style="padding:20px;width:75%;vertical-align:middle">
-          <a href="https://github.com/BigCiLeng/GeoGS">
+          <a href="https://bigcileng.github.io/render_arts/index.html">
             <span class="papertitle">3D Gaussian Splatting - rendering work</span>
           </a>
           <br>
@@ -179,11 +179,11 @@
       <tr onmouseout="stemExam_stop()" onmouseover="stemExam_stop()" > <!-- bgcolor="#ffffd0" --> 
         <td style="padding:20px;width:25%;vertical-align:middle">
           <div class="one">
-            <div class="two" id='stemExam_image'><video  width=100% height=100% muted autoplay loop>
+            <!-- <div class="two" id='stemExam_image'><video  width=100% height=100% muted autoplay loop>
             <source src="research/stemExam2.png" type="video/png">
             Your browser does not support the video tag.
-            </video></div>
-            <img src='research/stemExam2.png' width="160">
+            </video></div> -->
+            <img src='research/stemExam2.png' width="160" height="160">
           </div>
           <script type="text/javascript">
             function stemExam_start() {
@@ -214,6 +214,48 @@
             We gather the wiki pedia knowledge about science questions, and use the bag-of-words model to clean the datas. Then, we use the sentence transformer to find the similarity between the problen and the cleaned dataset. Training three large deberta models with different datasets, and combining their features to inferring the right answer.          </p>
         </td>
       </tr>
+
+      <!-- randla-randlasqn -->
+      <tr onmouseout="randla_stop()" onmouseover="randla_stop()" bgcolor="#ffffd0"> <!-- bgcolor="#ffffd0" --> 
+        <td style="padding:20px;width:25%;vertical-align:middle">
+          <div class="one">
+            <div class="two" id='randla_image'><video  width=100% height=100% muted autoplay loop>
+            <source src="research/randla.png" type="video/png">
+            Your browser does not support the video tag.
+            </video></div>
+            <img src='research/randla.png' width="160" height="160">
+          </div>
+          <script type="text/javascript">
+            function randla_start() {
+              document.getElementById('randla_image').style.opacity = "1";
+            }
+
+            function randla_stop() {
+              document.getElementById('randla_image').style.opacity = "0";
+            }
+            randla_stop()
+          </script>
+        </td>
+        <td style="padding:20px;width:75%;vertical-align:middle">
+          <a href="https://github.com/BigCiLeng/RandLA_pl">
+            <span class="papertitle">pytorch-lightning implementation of RandLA-Net && SQN</span>
+          </a>
+          <br>
+          <strong><em>Nan Wang</em></strong>
+          <br>
+            2023/10
+          <br>
+          <a href="https://github.com/BigCiLeng/RandLA_pl"><em>code1</em></a>
+          /
+          <a href="https://github.com/BigCiLeng/SQN_pl"><em>code2</em></a>
+          <p></p>
+          <p>
+            RandLA-Net(CVPR2020) is a light net which can process efficient semantic segmentation for <strong>3D point clouds</strong>, 
+            and SQN(ECCV2022) is based on RandLA-Net and achieves promising performance on seven large-scale open datasets under <strong>weak supervision schemes</strong>. 
+            The implementation of RandLA-Net is in <strong><em>code0</em></strong>, and SQN is in <strong><em>code1</em></strong>.
+          </p>
+        </td>
+      </tr>
       
       <!-- image2prompts -->
       <tr onmouseout="image2prompts_stop()" onmouseover="image2prompts_stop()" > <!-- bgcolor="#ffffd0" --> 
@@ -223,7 +265,7 @@
             <source src="research/image2prompt2.png" type="video/png">
             Your browser does not support the video tag.
             </video></div>
-            <img src='research/image2prompt2.png' width="160">
+            <img src='research/image2prompt2.png' width="160" height="160">
           </div>
           <script type="text/javascript">
             function image2prompts_start() {
@@ -263,7 +305,7 @@
             <source src="research/huaweiROBOT.png" type="video/png">
             Your browser does not support the video tag.
             </video></div>
-            <img src='research/huaweiROBOT.png' width="160">
+            <img src='research/huaweiROBOT.png' width="160" height="160">
           </div>
           <script type="text/javascript">
             function huaweirobot_start() {
