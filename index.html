@@ -2,7 +2,7 @@
  * @Author: BigCiLeng && bigcileng@outlook.com
  * @Date: 2023-07-25 02:03:25
  * @LastEditors: BigCiLeng && bigcileng@outlook.com
- * @LastEditTime: 2024-04-03 11:01:54
+ * @LastEditTime: 2024-04-21 22:02:08
  * @FilePath: \BigCileng.github.io\index.html
  * @Description: 
  * 
@@ -230,6 +230,93 @@
     <table style="padding-left:20px;width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;"><tbody></tbody>
       <!-- <table style="padding-left:20px;width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;">
         <tbody> -->
+      <!-- r2s pipeline -->
+      <tr onmouseout="r2s_stop()" onmouseover="r2s_start()"> <!-- bgcolor="#ffffd0" --> 
+        <td style="padding:20px;width:25%;vertical-align:middle">
+          <div class="one">
+            <div class="two" id='r2s_image'><video width=100% muted autoplay loop>
+            <source src="research/r2s1.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+            </video></div>
+            <img src='research/r2s1.png' width=100%>
+          </div>
+          <script type="text/javascript">
+            function r2s_start() {
+              document.getElementById('r2s_image').style.opacity = "1";
+            }
+
+            function r2s_stop() {
+              document.getElementById('r2s_image').style.opacity = "0";
+            }
+            r2s_stop()
+          </script>
+        </td>
+
+        <td style="padding:20px;width:75%;vertical-align:middle">
+          <a href="https://bigcileng.github.io">
+            <span class="papertitle">A Real2Sim Pipeline for robotics simulation</span>
+          </a>
+          <br>
+          <strong><em>Nana Wang</em></strong>,
+          <br>
+          2024/03
+          <br>
+          <!-- <a href="https://github.com/BigCiLeng/GeoGS"><em>code</em></a>
+          /
+          <a href="https://bigcileng.github.io/GS_Guangfulin/index.html"><em>project</em></a> -->
+          <p></p>
+          <p>
+            <!-- During the time I am doing my work based on <a href="https://repo-sam.inria.fr/fungraph/3d-gaussian-splatting/">3D Gaussian Splatting</a>, I use it to reconstruct some scene taken by myself. Here are four scenes taken at Guangfulin, a beautiful park in Songjiang District, Shanghai, China. Artifacts from the Zhou Dynasty have also been unearthed at the site. -->
+            I use 3D Gaussain Splating to build a novel robotics simulator, 
+            the physical simulation is implemented by ISSAC SIM while the photorealistic render is implemented ny 3DGS.
+          </p>
+        </td>
+      </tr>
+
+      <!-- assistgs -->
+      <tr onmouseout="assistgs_stop()" onmouseover="assistgs_start()"> <!-- bgcolor="#ffffd0" --> 
+        <td style="padding:20px;width:25%;vertical-align:middle">
+          <div class="one">
+            <div class="two" id='assistgs_image'><video width=100% muted autoplay loop>
+            <source src="research/assist_gs111.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+            </video></div>
+            <img src='research/assist_gs00.png' width=100%>
+          </div>
+          <script type="text/javascript">
+            function assistgs_start() {
+              document.getElementById('assistgs_image').style.opacity = "1";
+            }
+
+            function assistgs_stop() {
+              document.getElementById('assistgs_image').style.opacity = "0";
+            }
+            assistgs_stop()
+          </script>
+        </td>
+
+        <td style="padding:20px;width:75%;vertical-align:middle">
+          <a href="">
+            <span class="papertitle">3DGS implementation for <em>ASSIST: Interactive Scene Nodes for Scalable and Realistic Indoor Simulation</em></span>
+          </a>
+          <br>
+          <strong><em>Nana Wang</em></strong>,
+          <br>
+          2024/02
+          <br>
+          <!-- <a href="https://github.com/BigCiLeng/GeoGS"><em>code</em></a>
+          /
+          <a href="https://bigcileng.github.io"><em>project</em></a> -->
+          <p></p>
+          <p>
+            <!-- During the time I am doing my work based on <a href="https://repo-sam.inria.fr/fungraph/3d-gaussian-splatting/">3D Gaussian Splatting</a>, I use it to reconstruct some scene taken by myself. Here are four scenes taken at Guangfulin, a beautiful park in Songjiang District, Shanghai, China. Artifacts from the Zhou Dynasty have also been unearthed at the site. -->
+            I use 3D Gaussian Splatting and nerfstudio to build a implementation, 
+            which can accomplish the 3D scene decomposition and Reconstruction.
+          </p>
+        </td>
+      </tr>
+
+
       <!-- Gaussian splatting -->
       <tr onmouseout="gs_stop()" onmouseover="gs_start()"> <!-- bgcolor="#ffffd0" --> 
         <td style="padding:20px;width:25%;vertical-align:middle">
@@ -369,7 +456,7 @@
       <!-- <table style="padding-left:20px;width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;">
         <tbody> -->
       <!-- bgcolor="#ffffd0" -->
-      <!-- <tr onmouseout="image2prompts_stop()" onmouseover="image2prompts_stop()" >  
+      <tr onmouseout="image2prompts_stop()" onmouseover="image2prompts_stop()" >  
         <td style="padding:20px;width:25%;vertical-align:middle">
           <div class="one">
             <div class="two" id='image2prompts_image'><video  width=100% muted autoplay loop>
@@ -406,7 +493,7 @@
             We use a integration of ViT OFA and BLIP to make predictions on a dataset containing a wide variety of (prompt, image) pairs generated by Stable Diffusion 2.0.
           </p>
         </td>
-      </tr> -->
+      </tr>
     <!-- </tbody></table> -->
 
       <!-- huaweiROBOT -->
