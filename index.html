@@ -2,7 +2,7 @@
  * @Author: BigCiLeng && bigcileng@outlook.com
  * @Date: 2023-07-25 02:03:25
  * @LastEditors: BigCiLeng && bigcileng@outlook.com
- * @LastEditTime: 2024-12-18 16:01:56
+ * @LastEditTime: 2024-12-18 17:26:46
  * @FilePath: \BigCileng.github.io\index.html
  * @Description: 
  * 
@@ -229,10 +229,47 @@
       </tr>
     </tbody></table>
 
-    <table style="padding-left:20px;width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;"><tbody></tbody>
-      <!-- <table style="padding-left:20px;width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;">
-        <tbody> -->
+    <table style="padding-left:20px;width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;"><tbody>
 
+      <!-- SGGS -->
+      <tr onmouseout="sggs_start()" onmouseover="sggs_stop()" bgcolor="#ffffd0">
+        <td style="padding:20px;width:25%;vertical-align:middle">
+          <div class="one">
+            <div class="two" id='sggs_img'><video width=100% height=100% muted autoplay loop>
+            <source src="research/sggs.jpg" type="video/png">
+            Your browser does not support the video tag.
+            </video></div>
+            <img src="research/sggs.jpg" width="160">
+          </div>
+          <script type="text/javascript">
+            function sggs_start() {
+              document.getElementById('sggs_img').style.opacity = "1";
+            }
+
+            function sggs_stop() {
+              document.getElementById('sggs_img').style.opacity = "0";
+            }
+            sggs_stop()
+          </script>
+        </td>
+        <td style="padding:20px;width:75%;vertical-align:middle">
+          <span class="papertitle">Semantic-Guided Gaussian Splatting
+            with Deferred Rendering</span>
+          <br>
+            <strong>Nana Wang</strong>,
+            <a href="https://micro-han.github.io/">Xiaohan Yan</a>,
+            <a href="https://kevinsong729.github.io/">Xiaowei Song</a>,
+            Zhicheng Wang
+          <br>
+            2024/09, <strong><em>ICASSP 2025</em></strong>
+          <br>
+          <p> 
+            We use semantic features derived from 2D foundation model to revolutionize the material property optimization for 3DGS.
+          </p >
+        </td>
+      </tr>
+
+      <!-- RE-0 -->
       <tr onmouseout="re0_start()" onmouseover="re0_stop()">
         <td style="padding:20px;width:25%;vertical-align:middle">
           <div class="one">
@@ -254,64 +291,54 @@
           </script>
         </td>
         <td style="padding:20px;width:75%;vertical-align:middle">
-          <a href="https://recognizeeverything.github.io/">
-            <span class="papertitle">RE0: Recognize Everything with 3D Zero-shot Open-Vocabulary Instance Segmentation</span>
-          </a >
+          <span class="papertitle">RE0: Recognize Everything with 3D Zero-shot Open-Vocabulary Instance Segmentation</span>
           <br>
-          <a href="">Xiaohan Yan</a>,
-          <a href="">Zijian Jiang</a>,
-          <a href="">Yinghao Shuai</a>,
-          <strong>Nana Wang</strong>,
-          <a href="">Xiaowei Song</a>
+            <a href="https://micro-han.github.io/">Xiaohan Yan</a>,
+            <a href="">Zijian Jiang</a>,
+            <a href="">Yinghao Shuai</a>,
+            <strong>Nana Wang</strong>,
+            <a href="https://kevinsong729.github.io/">Xiaowei Song</a>
           <br>
-          <em>NeurIPS2024</em>, 
-          2024-5, <a href="">Code Will coming soon</a >, <a href="">Paper will coming soon</a>
+            2024/09, <strong><em>ICRA 2025</em></strong>
           <br>
           <p> 
-            We leverage the 3D geometry information in 3D point cloud, the
-            projection relationship between 3D point cloud and multi-view 2D posed RGB-D
-            frames and the semantic features extracted by CLIP from multi-view 2D posed
-            RGB-D frames to address the challenge of 3D instance segmentation. 
+            We leverage the 3D geometry information and the semantic features to address the challenge of 3D instance segmentation. 
           </p >
         </td>
       </tr>
 
-      <tr onmouseout="prcv_start()" onmouseover="prcv_stop()" bgcolor="">
+      <!-- r2s pipeline -->
+      <tr onmouseout="r2s_stop()" onmouseover="r2s_start()" bgcolor="#ffffd0"> 
         <td style="padding:20px;width:25%;vertical-align:middle">
           <div class="one">
-            <div class="two" id='prcv_img'><video width=100% height=100% muted autoplay loop>
-            <source src="research/PRCV.png" type="video/png">
+            <div class="two" id='r2s_image'><video width=100% muted autoplay loop>
+            <source src="research/r2s1.mp4" type="video/mp4">
             Your browser does not support the video tag.
             </video></div>
-            <img src="research/PRCV.png" width="160">
+            <img src='research/r2s1.png' width=100%>
           </div>
           <script type="text/javascript">
-            function prcv_start() {
-              document.getElementById('prcv_img').style.opacity = "1";
+            function r2s_start() {
+              document.getElementById('r2s_image').style.opacity = "1";
             }
 
-            function prcv_stop() {
-              document.getElementById('prcv_img').style.opacity = "0";
+            function r2s_stop() {
+              document.getElementById('r2s_image').style.opacity = "0";
             }
-            prcv_stop()
+            r2s_stop()
           </script>
         </td>
+
         <td style="padding:20px;width:75%;vertical-align:middle">
-          <a href="">
-            <span class="papertitle">AttenPoint: Exploring Point Cloud Segmentation through Attention-Based Modules</span>
-          </a >
+          <span class="papertitle">A Real2Sim Pipeline for robotics simulation</span>
           <br>
-          <a href="">Xiaohan Yan</a>,
-          <strong>Nana Wang</strong>,
-          <a href="">Xiaowei Song</a>
+            <strong><em>Nana Wang</em></strong>
           <br>
-          <em>PRCV2024</em>, 
-          2024-4, <a href="">Code Will coming soon</a >, <a href="">Paper will coming soon</a>
+            2024/06
           <br>
-          <p> 
-            Similar to how humans perceive 3D objects, neural networks discern the class labels of point clouds by combining local and global features of the structures and performance. 
-            Based on this, we reviewed the pipeline of few-shot point cloud semantic segmentation and identified three issues.
-            
+          <p>
+            We use 3D Gaussain Splating to build a novel robotics simulator, the physical simulation is implemented by ISSAC SIM while the photorealistic render is implemented by 3DGS.
+          </p>
         </td>
       </tr>
 
@@ -336,66 +363,22 @@
           </script>
         </td>
         <td style="padding:20px;width:75%;vertical-align:middle">
-          <a href="https://github.com/dragonbra/MetaLC-2nd-Round">
-            <span class="papertitle">GreedyAgent:A Simple yet Efficient Approach for Meta-learning from Learning Curves</span>
-          </a >
+          <span class="papertitle">GreedyAgent:A Simple yet Efficient Approach for Meta-learning from Learning Curves</span>
           <br>
-          <a href="">Jinyu He</a>,
-          <a href="">Xiaowei Song</a>,
-          <a href="">Xiaohan Yan</a>,
-          <strong>Nana Wang</strong>
+            <a href="https://github.com/dragonbra">Jinyu He</a>,
+            <a href="https://kevinsong729.github.io/">Xiaowei Song</a>,
+            <a href="https://micro-han.github.io/">Xiaohan Yan</a>,
+            <strong>Nana Wang</strong>
           <br>
-          <em>ICIC2024 oral</em>, 
-          2024-4, <a href="https://github.com/dragonbra/MetaLC-2nd-Round">Code</a >, <a href="">Paper will coming soon</a>
+            2024/04, <strong><em>ICIC 2024 oral</em></strong>
+          <br>
+            <a href="https://dl.acm.org/doi/10.1007/978-981-97-5663-6_41">paper</a>
+            /
+            <a href="https://github.com/dragonbra/MetaLC-2nd-Round">code</a >
           <br>
           <p> 
-            Meta-learning plays an increasingly importantt role in AutoML. 
-            A key sub-problem—meta-learning  from learning curves is an mmature but gradually attention area within the field of meta-learning.
+            A key sub-problem: meta-learning from learning curves is an mature but gradually attention area within the field of meta-learning.
           </p >
-        </td>
-      </tr>
-
-
-      <!-- r2s pipeline -->
-      <tr onmouseout="r2s_stop()" onmouseover="r2s_start()"> <!-- bgcolor="#ffffd0" --> 
-        <td style="padding:20px;width:25%;vertical-align:middle">
-          <div class="one">
-            <div class="two" id='r2s_image'><video width=100% muted autoplay loop>
-            <source src="research/r2s.mp4" type="video/mp4">
-            Your browser does not support the video tag.
-            </video></div>
-            <img src='research/r2s.png' width=100%>
-          </div>
-          <script type="text/javascript">
-            function r2s_start() {
-              document.getElementById('r2s_image').style.opacity = "1";
-            }
-
-            function r2s_stop() {
-              document.getElementById('r2s_image').style.opacity = "0";
-            }
-            r2s_stop()
-          </script>
-        </td>
-
-        <td style="padding:20px;width:75%;vertical-align:middle">
-          <a href="https://bigcileng.github.io">
-            <span class="papertitle">A Real2Sim Pipeline for robotics simulation</span>
-          </a>
-          <br>
-          <strong><em>Nana Wang</em></strong>,
-          <br>
-          2024/03
-          <br>
-          <!-- <a href="https://github.com/BigCiLeng/GeoGS"><em>code</em></a>
-          /
-          <a href="https://bigcileng.github.io/GS_Guangfulin/index.html"><em>project</em></a> -->
-          <p></p>
-          <p>
-            <!-- During the time I am doing my work based on <a href="https://repo-sam.inria.fr/fungraph/3d-gaussian-splatting/">3D Gaussian Splatting</a>, I use it to reconstruct some scene taken by myself. Here are four scenes taken at Guangfulin, a beautiful park in Songjiang District, Shanghai, China. Artifacts from the Zhou Dynasty have also been unearthed at the site. -->
-            I use 3D Gaussain Splating to build a novel robotics simulator, 
-            the physical simulation is implemented by ISSAC SIM while the photorealistic render is implemented ny 3DGS.
-          </p>
         </td>
       </tr>
 
@@ -422,248 +405,58 @@
         </td>
 
         <td style="padding:20px;width:75%;vertical-align:middle">
-          <a href="">
-            <span class="papertitle">3DGS implementation for <em>ASSIST: Interactive Scene Nodes for Scalable and Realistic Indoor Simulation</em></span>
-          </a>
+          <span class="papertitle">3DGS implementation for <em>Structured-NeRF: Hierarchical Scene Graph with Neural Representation</em></span>
           <br>
-          <strong><em>Nana Wang</em></strong>,
+            <strong><em>Nana Wang</em></strong>
           <br>
-          2024/02
+            2023/11
           <br>
-          <!-- <a href="https://github.com/BigCiLeng/GeoGS"><em>code</em></a>
-          /
-          <a href="https://bigcileng.github.io"><em>project</em></a> -->
-          <p></p>
+            <a href="https://www.ecva.net/papers/eccv_2024/papers_ECCV/papers/05154.pdf"><em>paper</em></a>
+            /
+            <a href="https://github.com/BigCiLeng/assist-gs"><em>code</em></a>
+          <br>
           <p>
-            <!-- During the time I am doing my work based on <a href="https://repo-sam.inria.fr/fungraph/3d-gaussian-splatting/">3D Gaussian Splatting</a>, I use it to reconstruct some scene taken by myself. Here are four scenes taken at Guangfulin, a beautiful park in Songjiang District, Shanghai, China. Artifacts from the Zhou Dynasty have also been unearthed at the site. -->
-            I use 3D Gaussian Splatting and nerfstudio to build a implementation, 
+            I use 3D Gaussian Splatting and nerfstudio to build an implementation, 
             which can accomplish the 3D scene decomposition and Reconstruction.
           </p>
         </td>
       </tr>
 
-
-      <!-- Gaussian splatting -->
-      <tr onmouseout="gs_stop()" onmouseover="gs_start()"> <!-- bgcolor="#ffffd0" --> 
+      <tr onmouseout="prcv_start()" onmouseover="prcv_stop()" bgcolor="">
         <td style="padding:20px;width:25%;vertical-align:middle">
           <div class="one">
-            <div class="two" id='gs_image'><video width=100% muted autoplay loop>
-            <source src="GS_Guangfulin/static/videos/bard.mp4" type="video/mp4">
+            <div class="two" id='prcv_img'><video width=100% height=100% muted autoplay loop>
+            <source src="research/PRCV.png" type="video/png">
             Your browser does not support the video tag.
             </video></div>
-            <img src='GS_Guangfulin/static/videos/bard.png' width=100%>
+            <img src="research/PRCV.png" width="160">
           </div>
           <script type="text/javascript">
-            function gs_start() {
-              document.getElementById('gs_image').style.opacity = "1";
+            function prcv_start() {
+              document.getElementById('prcv_img').style.opacity = "1";
             }
 
-            function gs_stop() {
-              document.getElementById('gs_image').style.opacity = "0";
+            function prcv_stop() {
+              document.getElementById('prcv_img').style.opacity = "0";
             }
-            gs_stop()
+            prcv_stop()
           </script>
         </td>
-
         <td style="padding:20px;width:75%;vertical-align:middle">
-          <a href="https://bigcileng.github.io/GS_Guangfulin/index.html">
-            <span class="papertitle">3D Gaussian Splatting - rendering work</span>
-          </a>
+          <span class="papertitle">AttenPoint: Exploring Point Cloud Segmentation through Attention-Based Modules</span>
           <br>
-          <strong><em>Nana Wang</em></strong>,
+            <a href="https://micro-han.github.io/">Xiaohan Yan</a>,
+            <strong>Nana Wang</strong>,
+            <a href="https://kevinsong729.github.io/">Xiaowei Song</a>
           <br>
-          2023/11
+            2023/08, <strong><em>PRCV 2024</em></strong>
+          <br> 
+            <a href="https://dl.acm.org/doi/10.1007/978-981-97-8508-7_11">paper</a>
           <br>
-          <a href="https://github.com/BigCiLeng/GeoGS"><em>code</em></a>
-          /
-          <a href="https://bigcileng.github.io/GS_Guangfulin/index.html"><em>project</em></a>
-          <p></p>
-          <p>
-            <!-- During the time I am doing my work based on <a href="https://repo-sam.inria.fr/fungraph/3d-gaussian-splatting/">3D Gaussian Splatting</a>, I use it to reconstruct some scene taken by myself. Here are four scenes taken at Guangfulin, a beautiful park in Songjiang District, Shanghai, China. Artifacts from the Zhou Dynasty have also been unearthed at the site. -->
-            I use <a href="https://repo-sam.inria.fr/fungraph/3d-gaussian-splatting/">3D Gaussian Splatting</a> to reconstruct some scene of Guangfulin taken by myself. Guangfulin is a beautiful park in Songjiang District, Shanghai, China.
-          </p>
+          <p> 
+            We combine local and global features of the structures and performance to perform few-shot point cloud semantic segmentation.  
         </td>
       </tr>
-      <!-- </tbody></table> -->
-
-      <!-- STEM EXAM -->
-      <!-- <table style="padding-left:20px;width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;">
-        <tbody> -->
-      <tr onmouseout="stemExam_stop()" onmouseover="stemExam_stop()" > <!-- bgcolor="#ffffd0" --> 
-        <td style="padding:20px;width:25%;vertical-align:middle">
-          <div class="one">
-            <!-- <div class="two" id='stemExam_image'><video  width=100% height=100% muted autoplay loop>
-            <source src="research/stemExam2.png" type="video/png">
-            Your browser does not support the video tag.
-            </video></div> -->
-            <a href="research/rag.png"><img src='research/rag.png' width=100%></a>
-          </div>
-          <script type="text/javascript">
-            function stemExam_start() {
-              document.getElementById('stemExam_image').style.opacity = "1";
-            }
-
-            function stemExam_stop() {
-              document.getElementById('stemExam_image').style.opacity = "0";
-            }
-            stemExam_stop()
-          </script>
-        </td>
-        
-        <td style="padding:20px;width:75%;vertical-align:middle">
-          <a href="https://github.com/490CAD/LLM4Science">
-            <span class="papertitle">LLM Science Exam - Use LLMs to answer difficult science questions</span>
-          </a>
-          <br>
-          <strong><em>Nana Wang</em></strong>,
-          <a href="https://micro-han.github.io/">Xiaohan Yan</a>,
-          <a href="https://kevinsong729.github.io/">Xiaowei Song</a>
-          <br>
-          <em>Kaggle</em>, 2023/10
-          <br>
-          <a href="https://github.com/490CAD/LLM4Science"><em>code</em></a>
-          <!-- <p></p> -->
-          <p>
-            <!-- We gather the wiki pedia knowledge about science questions, and use the bag-of-words model to clean the datas. Then, we use the sentence transformer to find the similarity between the problen and the cleaned dataset. Training three large deberta models with different datasets, and combining their features to inferring the right answer.          </p> -->
-            We gather the wiki pedia knowledge about science questions to make it into a RAG(Retrieval Augmented Generation) task, 
-            then we make three Deberta models with different finetuning and combine their output features to infer the right answer. 
-            <!-- It also can be seen as a Retrieval Augmented Generation (RAG) processing.       -->
-          </p>
-        </td>
-      </tr>
-    <!-- </tbody></table> -->
-
-      <!-- randla-randlasqn -->
-      <!-- <table style="padding-left:20px;width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;">
-        <tbody> -->
-      <tr onmouseout="randla_stop()" onmouseover="randla_stop()"> <!-- bgcolor="#ffffd0" --> 
-        <td style="padding:20px;width:25%;vertical-align:middle">
-          <div class="one">
-            <div class="two" id='randla_image'><video  width=100% muted autoplay loop>
-            <source src="research/randla1.png" type="video/png">
-            Your browser does not support the video tag.
-            </video></div>
-            <img src='research/randla1.png' width=100%>
-          </div>
-          <script type="text/javascript">
-            function randla_start() {
-              document.getElementById('randla_image').style.opacity = "1";
-            }
-
-            function randla_stop() {
-              document.getElementById('randla_image').style.opacity = "0";
-            }
-            randla_stop()
-          </script>
-        </td>
-        <td style="padding:20px;width:75%;vertical-align:middle">
-          <a href="https://github.com/BigCiLeng/RandLA_pl">
-            <span class="papertitle">Pytorch-Lightning Implementation of RandLA-Net && SQN</span>
-          </a>
-          <br>
-          <strong><em>Nana Wang</em></strong>
-          <br>
-            2023/10
-          <br>
-          <a href="https://github.com/BigCiLeng/RandLA_pl"><em>code1</em></a>
-          /
-          <a href="https://github.com/BigCiLeng/SQN_pl"><em>code2</em></a>
-          <p></p>
-          <p>
-            <!-- RandLA-Net(CVPR2020) is a light net which can process efficient semantic segmentation for <strong>3D point clouds</strong>,  -->
-            <!-- and SQN(ECCV2022) is based on RandLA-Net and achieves promising performance on seven large-scale open datasets under <strong>weak supervision schemes</strong>.  -->
-            The implementation of RandLA-Net(CVPR2020) is in <strong><em>code0</em></strong> (for large-scale semantic segmentation). 
-            and SQN(ECCV2022) is in <strong><em>code1</em></strong> (for weak supervision schemes).
-          </p>
-        </td>
-      </tr>
-      
-      <!-- image2prompts -->
-      <!-- <table style="padding-left:20px;width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;">
-        <tbody> -->
-      <!-- bgcolor="#ffffd0" -->
-      <tr onmouseout="image2prompts_stop()" onmouseover="image2prompts_stop()" >  
-        <td style="padding:20px;width:25%;vertical-align:middle">
-          <div class="one">
-            <div class="two" id='image2prompts_image'><video  width=100% muted autoplay loop>
-            <source src="research/image2prompt2.png" type="video/png">
-            Your browser does not support the video tag.
-            </video></div>
-            <img src='research/image2prompt2.png' width=100%>
-          </div>
-          <script type="text/javascript">
-            function image2prompts_start() {
-              document.getElementById('image2prompts_image').style.opacity = "1";
-            }
-
-            function image2prompts_stop() {
-              document.getElementById('image2prompts_image').style.opacity = "0";
-            }
-            image2prompts_stop()
-          </script>
-        </td>
-        <td style="padding:20px;width:75%;vertical-align:middle">
-          <a href="https://github.com/490CAD/ImagetoPrompts">
-            <span class="papertitle">Stable Diffusion - Image to Prompts</span>
-          </a>
-          <br>
-          <strong><em>Nana Wang</em></strong>,
-          <a href="https://micro-han.github.io/">Xiaohan Yan</a>,
-          <a href="https://kevinsong729.github.io/">Xiaowei Song</a>
-          <br>
-          <em>Kaggle</em>, 2023/05
-          <br>
-          <a href="https://github.com/490CAD/ImagetoPrompts"><em>code</em></a>
-          <p></p>
-          <p>
-            We use a integration of ViT OFA and BLIP to make predictions on a dataset containing a wide variety of (prompt, image) pairs generated by Stable Diffusion 2.0.
-          </p>
-        </td>
-      </tr>
-    <!-- </tbody></table> -->
-
-      <!-- huaweiROBOT -->
-      <!-- <table style="padding-left:20px;width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;">
-        <tbody> -->
-      <!-- bgcolor="#ffffd0" --> 
-      <!-- <tr onmouseout="huaweirobot_stop()" onmouseover="huaweirobot_start()" > 
-        <td style="padding:20px;width:25%;vertical-align:middle">
-          <div class="one">
-            <div class="two" id='huaweirobot_image'><video  width=100% muted autoplay loop>
-            <source src="research/huaweiROBOT.png" type="video/png">
-            Your browser does not support the video tag.
-            </video></div>
-            <img src='research/huaweiROBOT.png' width=100%>
-          </div>
-          <script type="text/javascript">
-            function huaweirobot_start() {
-              document.getElementById('huaweirobot_image').style.opacity = "1";
-            }
-
-            function huaweirobot_stop() {
-              document.getElementById('huaweirobot_image').style.opacity = "0";
-            }
-            huaweirobot_stop()
-          </script>
-        </td>
-        <td style="padding:20px;width:75%;vertical-align:middle">
-          <a href="https://github.com/490CAD/HUAWEIRobot">
-            <span class="papertitle">HUAWEIRobot planning for CodeCraft</span>
-          </a>
-          <br>
-          <strong><em>Nana Wang</em></strong>,
-          <a href="https://micro-han.github.io/">Xiaohan Yan</a>,
-          <a href="https://kevinsong729.github.io/">Xiaowei Song</a>
-          <br>
-          <em>CodeCraft</em>, 2023/04
-          <br>
-          <a href="https://github.com/490CAD/HUAWEIRobot"><em>code</em></a>
-          <p></p>
-          <p>
-            This project is about HUAWEI robots application, the project requires us to assign policies, control scheduling, and path planning for multiple robots in a single map.
-          </p>
-        </td>
-      </tr> -->
     </tbody></table>
     
 
@@ -694,12 +487,12 @@
     <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;"><tbody>
       <tr>
       <td style="padding:20px;width:100%;vertical-align:middle;text-align: right;">
-        Last updated on 2024/10/27
+        Last updated on 2024/12/18
       </td>
       </tr>
     </tbody></table>
     <!--==========================================
-                   Footer
+                    Footer
     ===========================================-->
     <!-- <footer class="page-footer grey lighten-2">
       <div class="row">
