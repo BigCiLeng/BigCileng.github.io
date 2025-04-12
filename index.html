@@ -2,7 +2,7 @@
  * @Author: BigCiLeng && bigcileng@outlook.com
  * @Date: 2023-07-25 02:03:25
  * @LastEditors: BigCiLeng && bigcileng@outlook.com
- * @LastEditTime: 2025-02-22 18:50:46
+ * @LastEditTime: 2025-04-13 01:56:08
  * @FilePath: \BigCileng.github.io\index.html
  * @Description: 
  * 
@@ -150,28 +150,28 @@
 
     <table style="padding-left:20px;width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;"><tbody>
       <!-- pugs -->
-      <!-- <tr onmouseout="pugs_start()" onmouseover="pugs_stop()">
+      <tr onmouseout="pugs_start()" onmouseover="pugs_stop()">
         <td style="padding:20px;width:25%;vertical-align:middle">
           <div class="one">
-            <div class="two" id='re0_img'><video width=100% height=100% muted autoplay loop>
-            <source src="research/pugs.png" type="video/png">
+            <div class="two" id='pugs_img'><video width=100% muted autoplay loop>
+            <source src="research/pugs.mp4" type="video/mp4">
             Your browser does not support the video tag.
             </video></div>
-            <img src="research/pugs.png" width="160">
+            <img src="research/pugs.png" width=100%>
           </div>
           <script type="text/javascript">
-            function re0_start() {
-              document.getElementById('re0_img').style.opacity = "1";
+            function pugs_start() {
+              document.getElementById('pugs_img').style.opacity = "1";
             }
 
-            function re0_stop() {
-              document.getElementById('re0_img').style.opacity = "0";
+            function pugs_stop() {
+              document.getElementById('pugs_img').style.opacity = "0";
             }
-            re0_stop()
+            pugs_stop()
           </script>
         </td>
         <td style="padding:20px;width:75%;vertical-align:middle">
-          <span class="papertitle"><strong>PUGS: Zero-shot Physical Understanding with Gaussian Splatting</strong></span>
+          <papertitle>PUGS: Zero-shot Physical Understanding with Gaussian Splatting</papertitle>
           <br>
             <a href="https://github.com/EverNorif">Yinghao Shuai</a>,
             <a href="https://marcyu0303.github.io/">Ran Yu</a>,
@@ -188,11 +188,17 @@
           <br>
             <strong><em>ICRA, 2025</em></strong>
           <br>
+            <em>[<a href="https://evernorif.github.io/PUGS/">project page</a>]</em>
+            /
+            <em>[<a href="https://arxiv.org/abs/2502.12231">paper</a>]</em>
+            /
+            <em>[<a href="https://github.com/EverNorif/PUGS">code</a>]</em>
+          <br>
           <p> 
-            We leverage the 3D geometry information and the semantic features to address the challenge of 3D instance segmentation. 
+            We reconstruct 3D objects using the Gaussian splatting representation and predicts various physical properties in a zero-shot manner. 
           </p >
         </td>
-      </tr> -->
+      </tr>
 
       <!-- RE-0 -->
       <tr onmouseout="re0_start()" onmouseover="re0_stop()">
@@ -545,13 +551,18 @@
           <br>
           <li>Français 🇫🇷 (learning)</li>
         </td>
+        <td style="padding:20px;width:20%;vertical-align:top">
+          <sub_heading>Others 💡</sub_heading>
+          <br><br>
+          <li><a href="GS_Guangfulin/index.html">Guangfulin</a></li>
+        </td>
       </tr>
     </tbody></table>
 
     <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;"><tbody>
       <tr>
       <td style="padding:20px;width:100%;vertical-align:middle;text-align: right;">
-        Last updated on 2025/02/22
+        Last updated on 2025/04/01
       </td>
       </tr>
     </tbody></table>
@@ -575,7 +586,7 @@
           </td>
         </tr>
         <div class="footer-copyright center black-text">
-          Copyright © Nan Wang 2025
+          Copyright © Nan Wang 2024-2025
         </div>  
       </tbody>
     </table>
