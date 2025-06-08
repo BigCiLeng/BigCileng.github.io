@@ -2,7 +2,7 @@
  * @Author: BigCiLeng && bigcileng@outlook.com
  * @Date: 2023-07-25 02:03:25
  * @LastEditors: BigCiLeng && bigcileng@outlook.com
- * @LastEditTime: 2025-05-27 21:28:26
+ * @LastEditTime: 2025-06-08 15:12:24
  * @FilePath: \BigCileng.github.io\index.html
  * @Description: 
  * 
@@ -149,6 +149,60 @@
     </tbody></table>
 
     <table style="padding-left:20px;width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;"><tbody>
+
+      <!-- bilateraldriving -->
+      <tr onmouseout="bilateraldriving_start()" onmouseover="bilateraldriving_stop()">
+        <td style="padding:20px;width:25%;vertical-align:middle">
+          <div class="one">
+            <div class="two" id='bilateraldriving_img'><video width=100% muted autoplay loop>
+            <source src="research/bilateraldriving-demo/bilateraldriving-demo.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+            </video></div>
+            <img src="research/bilateraldriving-demo/bilateraldriving-demo-cover.jpg" width=100%>
+          </div>
+          <script type="text/javascript">
+            function bilateraldriving_start() {
+              document.getElementById('bilateraldriving_img').style.opacity = "1";
+            }
+
+            function bilateraldriving_stop() {
+              document.getElementById('bilateraldriving_img').style.opacity = "0";
+            }
+            bilateraldriving_stop()
+          </script>
+        </td>
+        <td style="padding:20px;width:75%;vertical-align:middle">
+          <papertitle>Unifying Appearance Codes and Bilateral Grids for Driving Scene Gaussian Splatting</papertitle>
+          <br>
+            <strong>Nan Wang</strong>,
+            <a href="https://tao-11-chen.github.io/">Yuantao Chen</a>,
+            <a href="https://li-xingxiao.github.io/homepage/">Lixing Xiao</a>,
+            <a href="https://scholar.google.com.hk/citations?user=v0iwkScAAAAJ&amp;hl=en&amp;oi=sra">Weiqing Xiao</a>,
+            <a href="https://scholar.google.com/citations?user=V-YdQiAAAAAJ">Bohan Li</a>,
+            <a href="https://scholar.google.com/citations?user=HsV0WbwAAAAJ">Zhaoxi Chen</a>,
+            <a href="https://github.com/hugoycj">Chongjie Ye</a>,
+            <a href="https://daniellli.github.io/">Shaocong Xu</a>,
+            <a href="https://scholar.google.com/citations?user=P4efBMcAAAAJ">Saining Zhang</a>,
+            <a href="https://ziyangyan.github.io/">Ziyang Yan</a>,
+            <a href="https://scholar.google.com.hk/citations?user=NMSccqAAAAAJ">Pierre Merriaux</a>,
+            <a href="">Lei Lei</a>,
+            <a href="https://tianfan.info/">Tianfan Xue</a>,
+            <a href="https://scholar.google.com.hk/citations?user=ygQznUQAAAAJ&amp;hl=en">Hao Zhao</a>
+          <br>
+            <strong><em>arXiv, 2025</em></strong>
+          <br>
+            <em>[<a href="https://bigcileng.github.io/bilateral-driving/">project page</a>]</em>
+            /
+            <em>[<a href="https://arxiv.org/abs/2506.05280">paper</a>]</em>
+            /
+            <em>[<a href="https://github.com/BigCiLeng/bilateral-driving">code</a>]</em>
+          <br>
+          <p> 
+            We use Multi-Scale Bilateral Grids that improves geometric accuracy in driving scene reconstruction through enhancing photometric consistency.
+          </p >
+        </td>
+      </tr>
+
       <!-- pugs -->
       <tr onmouseout="pugs_start()" onmouseover="pugs_stop()">
         <td style="padding:20px;width:25%;vertical-align:middle">
@@ -217,6 +271,12 @@
             <a href="https://kevinsong729.github.io/">Xiaowei Song</a>
           <br>
             <strong><em>ICRA, 2025</em></strong>
+          <br>
+            <em>[<a href="https://recognizeeverything.github.io/">project page</a>]</em>
+            /
+            <em>[<a href="https://recognizeeverything.github.io/src/RE0_for_NeurIPS_2024.pdf">paper</a>]</em>
+            /
+            <em>[<a href="https://github.com/RecognizeEverything/Re0">code</a>]</em>
           <br>
           <p> 
             We leverage the 3D geometry information and the semantic features to address the challenge of 3D instance segmentation. 
