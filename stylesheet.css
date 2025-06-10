@@ -206,7 +206,20 @@ span.highlight {
 }
 
 .news {
-  width: 640px;
+  /* 1. 设置最大宽度为640px */
+  max-width: 640px; 
+  
+  /* 2. 让宽度充满其父容器，但不会超过max-width */
+  width: 100%;
+  
+  /* 3. 在页面上水平居中显示 (可选，但推荐) */
+  margin-left: auto;
+  margin-right: auto;
+  
+  /* 4. 保留你原来的高度和滚动条设置 */
   height: 150px;
   overflow-y: scroll;
+  
+  /* 5. 建议添加，避免内边距撑大容器 */
+  box-sizing: border-box; 
 }
