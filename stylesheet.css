@@ -97,7 +97,10 @@ heading {
 papertitle {
   font-family: 'Lato', Verdana, Helvetica, sans-serif;
   font-size: 14px;
-  font-weight: 700
+  font-weight: 700;
+  display: block;            /* 建议添加，让它表现为块级元素，更好地控制布局 */
+  overflow-wrap: break-word; /* 关键：允许长单词在必要时换行 */
+  word-wrap: break-word;     /* 兼容旧版浏览器 */
 }
 
 name {
@@ -170,4 +173,40 @@ span.highlight {
   background-size: auto 6px;
   background-repeat: repeat-x;
   text-decoration: none;
+}
+.icon-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 30px;               /* 默认间距 */
+  padding: 15px;           /* 默认内边距 */
+  width: 100%;
+  box-sizing: border-box;  /* 关键：让 padding 不会撑大容器宽度 */
+}
+
+.icon-container a {
+  display: inline-block;
+  flex-shrink: 0;          /* 防止图标在 flex 布局中被不期望地压缩 */
+}
+
+.icon-container img {
+  height: 40px;
+  max-width: 100%;         /* 关键：确保图片不会比其父容器更宽 */
+  vertical-align: middle;
+}
+
+
+/* --- 响应式优化 (当屏幕宽度小于等于 480px 时生效) --- */
+@media (max-width: 480px) {
+  .icon-container {
+    gap: 15px;             /* 在小屏幕上减小图标间距 */
+    padding: 10px;         /* 在小屏幕上减小容器内边距 */
+  }
+}
+
+.news {
+  width: 640px;
+  height: 150px;
+  overflow-y: scroll;
 }
