@@ -9,80 +9,36 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="shortcut icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🀁</text></svg>" type="image/x-icon">
     <link rel="stylesheet" type="text/css" href="stylesheet.css">
-    <link href="./files/materialize.min.css" type="text/css" rel="stylesheet" media="screen,projection">
-    <link href="./files/aos.css" type="text/css" rel="stylesheet" media="screen,projection">
-    <link href="./files/style.css" type="text/css" rel="stylesheet" media="screen,projection">
+    <!-- 图标字体库 - 使用更轻量的版本 -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" media="print" onload="this.media='all'">
+    <noscript><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"></noscript>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1.9.4/css/academicons.min.css" media="print" onload="this.media='all'">
+    <noscript><link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1.9.4/css/academicons.min.css"></noscript>
     <style type="text/css">
-      @import url(https://fonts.googleapis.com/css?family=Roboto:400,400italic,500,500italic,700,700italic,900,900italic,300italic,300);
-        /* Color scheme stolen from Sergey Karayev */
-        a {
-        /*color: #b60a1c;*/
-        color: #1772d0;
-        /*color: #bd0a36;*/
-        text-decoration:none;
-        }
-        a:focus, a:hover {
-        color: #f09228;
-        text-decoration:none;
-        }
-        body,td,th,tr,p,a {
-        font-family: 'Roboto', sans-serif;
-        font-size: 15px;
-        font-weight: 400;
-        }
-        strong {
-        font-family: 'Roboto', sans-serif;
-        font-size: 15px;
-        font-weight: 700;
-        }
-        heading {
-        font-family: 'Roboto', sans-serif;
-        font-size: 24px;
-        font-weight: 400;
-        }
-        papertitle {
-        font-family: 'Roboto', sans-serif;
-        /* color: #1772d0; */
-        color: #336699;
-        font-size: 16px;
-        font-weight:500;
-        }
-        name {
-        font-family: 'Roboto', sans-serif;
-        font-weight: 400;
-        font-size: 32px;
-        }
-        .one
-        {
-        width: 160px;
-        height: 140px;
-        position: relative;
-        }
-        .two
-        {
-        width: 160px;
-        height: 160px;
-        position: absolute;
-        transition: opacity .2s ease-in-out;
-        -moz-transition: opacity .2s ease-in-out;
-        -webkit-transition: opacity .2s ease-in-out;
-        }
-        .fade {
-        transition: opacity .2s ease-in-out;
-        -moz-transition: opacity .2s ease-in-out;
-        -webkit-transition: opacity .2s ease-in-out;
-        }
-        span.highlight {
-            background-color: #ffffd0;
-        }
+        /* 内联样式已移至外部CSS文件，保持简洁 */
         .newnew {
-            color: #82A099 ; /* 你选择的高亮颜色 */
+            background: var(--blue-accent);
+            color: white;
+            font-weight: 600;
+            padding: 3px 8px;
+            border-radius: var(--radius-sm);
+            font-size: 0.8em;
+            letter-spacing: 0.02em;
         }
       </style>
     <script src="scripts/functions.js"></script>
   </head>
 
   <body>
+    <!-- 主题切换按钮 -->
+    <div class="theme-toggle-container">
+      <button id="theme-toggle" class="theme-toggle-btn" aria-label="切换主题">
+        <span class="theme-icon sun-icon">☀️</span>
+        <span class="theme-icon moon-icon">🌙</span>
+      </button>
+    </div>
+    
+    <div class="main-container">
     <table style="width:100%;max-width:800px;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;"><tbody>
       <tr style="padding:0px">
         <td style="padding:0px">
@@ -90,21 +46,32 @@
             <tr style="padding:0px">
               <td style="padding:2.5%;width:63%;vertical-align:middle">
               <p style="text-align:center">
-                <name>Nan Wang&nbsp;&nbsp;&nbsp;</name>
+                <name>🀁 Nan Wang&nbsp;&nbsp;&nbsp;</name>
               </p>
                 <p>
     I am an Algorithm Engineer at the <strong><a href="https://www.baai.ac.cn/">Beijing Academy of Artificial Intelligence (BAAI)</a></strong>, where I develop and implement cutting-edge solutions in neural rendering and world models, exploring their potential applications in VR, robotics, and autonomous driving. I earned my Master's in Computer Science from the <strong><a href="https://see.tongji.edu.cn/index.htm">Tongji University</a></strong>.
 
-                <p style="text-align:center">
-                <a href="mailto:bigcileng@gmail.com">Email</a> &nbsp/&nbsp
-                <!-- <a href="data/nana_wang_cv_en.pdf">CV</a> &nbsp/&nbsp -->
-                <a href="https://scholar.google.com/citations?user=BWfLE6EAAAAJ">Google Scholar</a> &nbsp/&nbsp
-                <a href="https://github.com/BigCiLeng/">Github</a>&nbsp/&nbsp
-                <a href="https://x.com/bigcileng">X(Twitter)</a>
-                </p>
+                <div class="contact-icons">
+                <a href="mailto:bigcileng@gmail.com" class="contact-icon email-icon">
+                  <i class="fas fa-envelope"></i>
+                  <span>Email</span>
+                </a>
+                <a href="https://scholar.google.com/citations?user=BWfLE6EAAAAJ" class="contact-icon scholar-icon">
+                  <i class="fas fa-graduation-cap"></i>
+                  <span>Scholar</span>
+                </a>
+                <a href="https://github.com/BigCiLeng/" class="contact-icon github-icon">
+                  <i class="fab fa-github"></i>
+                  <span>GitHub</span>
+                </a>
+                <a href="https://x.com/bigcileng" class="contact-icon twitter-icon">
+                  <i class="fab fa-twitter"></i>
+                  <span>Twitter</span>
+                </a>
+                </div>
               </td>
               <td style="padding:2.5%;width:37%;max-width:37%">
-                <a href="https://github.com/BigCiLeng"><img style="width:100%;max-width:100%;object-fit: cover; border-radius: 50%;" alt="profile photo" src="images/ava_freedom1.jpg" class="hoverZoomLink"></a>
+                <a href="https://github.com/BigCiLeng"><img style="width:100%;max-width:100%;object-fit: cover; border-radius: 50%;" alt="profile photo" src="images/ava_freedom1.jpg" class="hoverZoomLink" loading="lazy"></a>
               </td>
             </tr>
           </tbody></table>
@@ -115,6 +82,8 @@
                 <h2>News</h2>
           <div class="news">
             <ul style="text-align:justify;height: 150px;">
+              <li><strong class="newnew">[09-2025]</strong> Our HOLO is is accepted to WACV 2026.</a></li>
+              <li><strong class="newnew">[08-2025]</strong> Our <a href="https://gzwsama.github.io/OnePoseviaGen.github.io/">OnePoseviaGen</a> is accepted to CoRL 2025 as <strong>Oral.</strong></li>
               <li><strong class="newnew">[06-2025]</strong> Our <a href="https://bigcileng.github.io/bilateral-driving/">BilateralDriving</a> is now available.</li>
               <li><strong class="newnew">[02-2025]</strong> I have been on an internship at <a href="https://www.baai.ac.cn/">Beijing Academy of Artificial Intelligence</a>. </li>
               <li><strong class="newnew">[02-2025]</strong> Two papers are accepted to ICRA 2025. </li>
@@ -140,16 +109,71 @@
               </td>
             </tr>
           </tbody></table>
-          <table style="width:100%;border:0px;border-spacing:0px 10px;border-collapse:separate;margin-right:auto;margin-left:auto;"><tbody>
+          <table style="width:100%;border:0px;border-spacing:0px 8px;border-collapse:separate;margin-right:auto;margin-left:auto;"><tbody>
+
+      <!-- holo -->
+      <tr onmouseout="holo_start()" onmouseover="holo_stop()">
+        <td style="padding:12px;width:18%;vertical-align:top">
+          <div class="one">
+            <div class="two" id='holo_img'><video width=100% height=100% muted autoplay loop>
+            <source src="research/holo-demo/holo.png" type="video/png">
+            Your browser does not support the video tag.
+            </video></div>
+            <img src="research/holo-demo/holo.png" width="160" loading="lazy">
+          </div>
+          <script type="text/javascript">
+            function holo_start() {
+              document.getElementById('holo_img').style.opacity = "1";
+            }
+
+            function holo_stop() {
+              document.getElementById('holo_img').style.opacity = "0";
+            }
+            holo_stop()
+          </script>
+        </td>
+        <td style="padding:12px;width:82%;vertical-align:top">
+          <papertitle>HOLO: Holistic Lightweight Optimization for Scene Understanding with Auto-Annotation and Multimodal Learning</papertitle>
+          <br>
+            Xiaoyun hu*, 
+            <a href="https://scholar.google.com/citations?user=BWfLE6EAAAAJ">Xiaohan Yan*</a>,
+            <strong>Nan Wang</strong>,
+            <a href="https://kevinsong729.github.io/">Xiaowei Song</a>,
+            Gang Wei, 
+            Zhicheng Wang
+          <br>
+            <strong><em>WACV, 2026</em></strong>
+          <br>
+            <div class="paper-links">
+              <!-- <a href="https://ieeexplore.ieee.org/document/10887567" class="paper-icon paper-icon" title="Paper">
+                <i class="fas fa-file-pdf"></i>
+                <span>Paper</span>
+              </a>
+              <a href="https://github.com/BigCiLeng/SGGS" class="paper-icon code-icon" title="Code">
+                <i class="fab fa-github"></i>
+                <span>Code</span>
+              </a>
+              <a href="research/SGGS-Poster.pdf" class="paper-icon poster-icon" title="Poster">
+                <i class="fas fa-image"></i>
+                <span>Poster</span>
+              </a> -->
+            </div>
+          <p style="margin:2px 0;line-height:1.4;"> 
+            We propose HOLO, which includes a large-scale scene description dataset and a lightweight 3D-LLM.
+          </p>
+        </td>
+      </tr>
+
+
       <!-- bilateraldriving -->
       <tr onmouseout="bilateraldriving_start()" onmouseover="bilateraldriving_stop()">
-        <td style="padding:16px;width:20%;vertical-align:middle">
+        <td style="padding:12px;width:18%;vertical-align:top">
           <div class="one">
             <div class="two" id='bilateraldriving_img'><video width=100% height=100% muted autoplay loop>
             <source src="research/bilateraldriving-demo/bilateraldriving-demo.mp4" type="video/mp4">
             Your browser does not support the video tag.
             </video></div>
-            <img src="research/bilateraldriving-demo/bilateraldriving-demo-cover.jpg" width="160">
+            <img src="research/bilateraldriving-demo/bilateraldriving-demo-cover.jpg" width="160" loading="lazy">
           </div>
           <script type="text/javascript">
             function bilateraldriving_start() {
@@ -162,7 +186,7 @@
             bilateraldriving_stop()
           </script>
         </td>
-        <td style="padding:8px;width:80%;vertical-align:middle">
+        <td style="padding:12px;width:82%;vertical-align:top">
           <papertitle>Unifying Appearance Codes and Bilateral Grids for Driving Scene Gaussian Splatting</papertitle>
           <br>
             <strong>Nan Wang</strong>,
@@ -182,26 +206,34 @@
           <br>
             <strong><em>arXiv, 2025</em></strong>
           <br>
-            <em>[<a href="https://bigcileng.github.io/bilateral-driving/">project page</a>]</em>
-            /
-            <em>[<a href="https://arxiv.org/abs/2506.05280">paper</a>]</em>
-            /
-            <em>[<a href="https://github.com/BigCiLeng/bilateral-driving">code</a>]</em>
-          <br>
-          <p> 
+            <div class="paper-links">
+              <a href="https://bigcileng.github.io/bilateral-driving/" class="paper-icon project-icon">
+                <i class="fas fa-globe"></i>
+                <span>Project</span>
+              </a>
+              <a href="https://arxiv.org/abs/2506.05280" class="paper-icon arxiv-icon">
+                <i class="ai ai-arxiv"></i>
+                <span>Paper</span>
+              </a>
+              <a href="https://github.com/BigCiLeng/bilateral-driving" class="paper-icon code-icon">
+                <i class="fab fa-github"></i>
+                <span>Code</span>
+              </a>
+            </div>
+          <p style="margin:2px 0;line-height:1.4;"> 
             We use Multi-Scale Bilateral Grids that improves geometric accuracy in driving scene reconstruction through enhancing photometric consistency.
           </p >
         </td>
       </tr>
 
       <tr onmouseout="pugs_start()" onmouseover="pugs_stop()">
-        <td style="padding:16px;width:20%;vertical-align:middle">
+        <td style="padding:12px;width:18%;vertical-align:top">
           <div class="one">
             <div class="two" id='pugs_img'><video width=100% muted autoplay loop>
             <source src="research/pugs-demo/pugs-demo.mp4" type="video/mp4">
             Your browser does not support the video tag.
             </video></div>
-            <img src="research/pugs-demo/pugs-demo-cover.jpg" width=160>
+            <img src="research/pugs-demo/pugs-demo-cover.jpg" width=160 loading="lazy">
           </div>
           <script type="text/javascript">
             function pugs_start() {
@@ -214,7 +246,7 @@
             pugs_stop()
           </script>
         </td>
-        <td style="padding:8px;width:80%;vertical-align:middle">
+        <td style="padding:12px;width:82%;vertical-align:top">
           <papertitle>PUGS: Zero-shot Physical Understanding with Gaussian Splatting</papertitle>
           <br>
             <a href="https://github.com/EverNorif">Yinghao Shuai</a>,
@@ -232,25 +264,33 @@
           <br>
             <strong><em>ICRA, 2025</em></strong>
           <br>
-            <em>[<a href="https://evernorif.github.io/PUGS/">project page</a>]</em>
-            /
-            <em>[<a href="https://arxiv.org/abs/2502.12231">paper</a>]</em>
-            /
-            <em>[<a href="https://github.com/EverNorif/PUGS">code</a>]</em>
-          <br>
-          <p> 
+            <div class="paper-links">
+              <a href="https://evernorif.github.io/PUGS/" class="paper-icon project-icon" title="Project Page">
+                <i class="fas fa-globe"></i>
+                <span>Project</span>
+              </a>
+              <a href="https://arxiv.org/abs/2502.12231" class="paper-icon arxiv-icon" title="Paper">
+                <i class="ai ai-arxiv"></i>
+                <span>Paper</span>
+              </a>
+              <a href="https://github.com/EverNorif/PUGS" class="paper-icon code-icon" title="Code">
+                <i class="fab fa-github"></i>
+                <span>Code</span>
+              </a>
+            </div>
+          <p style="margin:2px 0;line-height:1.4;"> 
             We reconstruct 3D objects using the Gaussian splatting representation and predicts various physical properties in a zero-shot manner. 
           </p >
         </td>
       </tr>
 
       <tr onmouseout="re0_start()" onmouseover="re0_stop()">
-        <td style="padding:16px;width:20%;vertical-align:middle">
+        <td style="padding:12px;width:18%;vertical-align:top">
           <div class="one">
-            <img src="research/re0-demo/re0-cover.png" width="160">
+            <img src="research/re0-demo/re0-cover.png" width="160" loading="lazy">
           </div>
         </td>
-        <td style="padding:8px;width:80%;vertical-align:middle">
+        <td style="padding:12px;width:82%;vertical-align:top">
           <papertitle>RE0: Recognize Everything with 3D Zero-shot Open-Vocabulary Instance Segmentation</papertitle>
           <br>
             <a href="https://micro-han.github.io/">Xiaohan Yan</a>,
@@ -266,26 +306,34 @@
           <br>
             <strong><em>ICRA, 2025</em></strong>
           <br>
-            <em>[<a href="https://recognizeeverything.github.io/">project page</a>]</em>
-            /
-            <em>[<a href="https://recognizeeverything.github.io/src/RE0_for_NeurIPS_2024.pdf">paper</a>]</em>
-            /
-            <em>[<a href="https://github.com/RecognizeEverything/Re0">code</a>]</em>
-          <br>
-          <p> 
+            <div class="paper-links">
+              <a href="https://recognizeeverything.github.io/" class="paper-icon project-icon" title="Project Page">
+                <i class="fas fa-globe"></i>
+                <span>Project</span>
+              </a>
+              <a href="https://recognizeeverything.github.io/src/RE0_for_NeurIPS_2024.pdf" class="paper-icon paper-icon" title="Paper">
+                <i class="fas fa-file-pdf"></i>
+                <span>Paper</span>
+              </a>
+              <a href="https://github.com/RecognizeEverything/Re0" class="paper-icon code-icon" title="Code">
+                <i class="fab fa-github"></i>
+                <span>Code</span>
+              </a>
+            </div>
+          <p style="margin:2px 0;line-height:1.4;"> 
             We leverage the 3D geometry information and the semantic features to address the challenge of 3D instance segmentation. 
           </p >
         </td>
       </tr>
 
       <tr onmouseout="sggs_start()" onmouseover="sggs_stop()">
-        <td style="padding:16px;width:20%;vertical-align:middle">
+        <td style="padding:12px;width:18%;vertical-align:top">
           <div class="one">
             <div class="two" id='sggs_img'><video width=100% height=100% muted autoplay loop>
             <source src="research/sggs-demo/sggs1.png" type="video/png">
             Your browser does not support the video tag.
             </video></div>
-            <img src="research/sggs-demo/sggs1.png" width="160">
+            <img src="research/sggs-demo/sggs1.png" width="160" loading="lazy">
           </div>
           <script type="text/javascript">
             function sggs_start() {
@@ -298,7 +346,7 @@
             sggs_stop()
           </script>
         </td>
-        <td style="padding:8px;width:80%;vertical-align:middle">
+        <td style="padding:12px;width:82%;vertical-align:top">
           <papertitle>Semantic-Guided Gaussian Splatting
             with Deferred Rendering</papertitle>
           <br>
@@ -309,26 +357,34 @@
           <br>
             <strong><em>ICASSP, 2025</em></strong>
           <br>
-            <em>[<a href="https://ieeexplore.ieee.org/document/10887567">paper</a>]</em>
-            /
-            <em>[<a href="https://github.com/BigCiLeng/SGGS">code</a>]</em>
-            /
-            <em>[<a href="research/SGGS-Poster.pdf">poster</a>]</em>
-          <br>
-          <p> 
+            <div class="paper-links">
+              <a href="https://ieeexplore.ieee.org/document/10887567" class="paper-icon paper-icon" title="Paper">
+                <i class="fas fa-file-pdf"></i>
+                <span>Paper</span>
+              </a>
+              <a href="https://github.com/BigCiLeng/SGGS" class="paper-icon code-icon" title="Code">
+                <i class="fab fa-github"></i>
+                <span>Code</span>
+              </a>
+              <a href="research/SGGS-Poster.pdf" class="paper-icon poster-icon" title="Poster">
+                <i class="fas fa-image"></i>
+                <span>Poster</span>
+              </a>
+            </div>
+          <p style="margin:2px 0;line-height:1.4;"> 
             We use semantic features derived from 2D foundation model to revolutionize the material property optimization for 3DGS.
           </p>
         </td>
       </tr>
 
       <tr onmouseout="icic_start()" onmouseover="icic_stop()">
-        <td style="padding:16px;width:20%;vertical-align:middle">
+        <td style="padding:12px;width:18%;vertical-align:top">
           <div class="one">
             <div class="two" id='icic_img'><video width=100% muted autoplay loop>
             <source src="research/icic-demo/ICIC.jpg" type="video/png">
             Your browser does not support the video tag.
             </video></div>
-            <img src="research/icic-demo/ICIC.jpg" width="160">
+            <img src="research/icic-demo/ICIC.jpg" width="160" loading="lazy">
           </div>
           <script type="text/javascript">
             function icic_start() {
@@ -340,7 +396,7 @@
             icic_stop()
           </script>
         </td>
-        <td style="padding:8px;width:80%;vertical-align:middle">
+        <td style="padding:12px;width:82%;vertical-align:top">
           <papertitle>GreedyAgent: A Simple yet Efficient Approach for Meta learning from Learning Curves</papertitle>
           <br>
             <a href="https://github.com/dragonbra">Jinyu He</a>,
@@ -356,24 +412,30 @@
           <br>
             <strong><em>ICIC, 2024, oral</em></strong>
           <br>
-            <em>[<a href="https://dl.acm.org/doi/10.1007/978-981-97-5663-6_41">paper</a>]</em>
-            /
-            <em>[<a href="https://github.com/dragonbra/MetaLC-2nd-Round">code</a>]</em>
-          <br>
-          <p> 
+            <div class="paper-links">
+              <a href="https://dl.acm.org/doi/10.1007/978-981-97-5663-6_41" class="paper-icon paper-icon" title="Paper">
+                <i class="fas fa-file-pdf"></i>
+                <span>Paper</span>
+              </a>
+              <a href="https://github.com/dragonbra/MetaLC-2nd-Round" class="paper-icon code-icon" title="Code">
+                <i class="fab fa-github"></i>
+                <span>Code</span>
+              </a>
+            </div>
+          <p style="margin:2px 0;line-height:1.4;"> 
             A key sub-problem: meta-learning from learning curves is an mature but gradually attention area within the field of meta-learning.
           </p>
         </td>
       </tr>
 
       <tr onmouseout="prcv_start()" onmouseover="prcv_stop()">
-        <td style="padding:16px;width:20%;vertical-align:middle">
+        <td style="padding:12px;width:18%;vertical-align:top">
           <div class="one">
             <div class="two" id='prcv_img'><video width=100% height=100% muted autoplay loop>
             <source src="research/prcv/PRCV.png" type="video/png">
             Your browser does not support the video tag.
             </video></div>
-            <img src="research/prcv/PRCV.png" width="160">
+            <img src="research/prcv/PRCV.png" width="160" loading="lazy">
           </div>
           <script type="text/javascript">
             function prcv_start() {
@@ -385,7 +447,7 @@
             prcv_stop()
           </script>
         </td>
-        <td style="padding:8px;width:80%;vertical-align:middle">
+        <td style="padding:12px;width:82%;vertical-align:top">
           <papertitle>AttenPoint: Exploring Point Cloud Segmentation through Attention-Based Modules</papertitle>
           <br>
             <a href="https://micro-han.github.io/">Xiaohan Yan</a>,
@@ -396,9 +458,13 @@
           <br>
             <strong><em>PRCV, 2024</em></strong>
           <br> 
-            <em>[<a href="https://dl.acm.org/doi/10.1007/978-981-97-8508-7_11">paper</a>]</em>
-          <br>
-          <p> 
+            <div class="paper-links">
+              <a href="https://dl.acm.org/doi/10.1007/978-981-97-8508-7_11" class="paper-icon paper-icon" title="Paper">
+                <i class="fas fa-file-pdf"></i>
+                <span>Paper</span>
+              </a>
+            </div>
+          <p style="margin:2px 0;line-height:1.4;"> 
             We combine local and global features of the structures and performance to perform few-shot point cloud semantic segmentation.  
           </p>
           </td>
@@ -412,11 +478,11 @@
               </td>
             </tr>
           </tbody></table>
-          <table style="width:100%;border:0px;border-spacing:0px 10px;border-collapse:separate;margin-right:auto;margin-left:auto;"><tbody>
+          <table style="width:100%;border:0px;border-spacing:0px 8px;border-collapse:separate;margin-right:auto;margin-left:auto;"><tbody>
 
       <!-- r2s pipeline -->
       <tr onmouseout="r2s_stop()" onmouseover="r2s_start()" bgcolor="#ffffd0"> 
-        <td style="padding:16px;width:20%;vertical-align:middle">
+        <td style="padding:12px;width:18%;vertical-align:top">
           <div class="one">
             <div class="two" id='r2s_image'><video width=100% muted autoplay loop>
             <source src="research/r2g-demo/r2g-demo.mp4" type="video/mp4">
@@ -435,16 +501,20 @@
             r2s_stop()
           </script>
         </td>
-        <td style="padding:8px;width:80%;vertical-align:middle">
+        <td style="padding:12px;width:82%;vertical-align:top">
           <papertitle>A Real2Sim Pipeline for robotics simulation</papertitle>
           <br>
             <em>Xiaomi</em>
           <br>
             <strong><em>2024-06</em></strong>
           <br>
-            <em>[<a href="https://github.com/BigCiLeng/R2G">code</a>]</em>
-          <br>
-          <p>
+            <div class="paper-links">
+              <a href="https://github.com/BigCiLeng/R2G" class="paper-icon code-icon" title="Code">
+                <i class="fab fa-github"></i>
+                <span>Code</span>
+              </a>
+            </div>
+          <p style="margin:2px 0;line-height:1.4;">
             We use 3D Gaussain Splating to build a novel robotics simulator, the physical simulation is implemented by ISAAC SIM while the photorealistic render is implemented by 3DGS.
           </p>
         </td>
@@ -452,7 +522,7 @@
 
       <!-- assistgs -->
       <tr onmouseout="assistgs_stop()" onmouseover="assistgs_start()">
-        <td style="padding:16px;width:20%;vertical-align:middle">
+        <td style="padding:12px;width:18%;vertical-align:top">
           <div class="one">
             <div class="two" id='assistgs_image'><video width=100% muted autoplay loop>
             <source src="research/assist-demo/assist-demo.mp4" type="video/mp4">
@@ -471,18 +541,24 @@
             assistgs_stop()
           </script>
         </td>
-        <td style="padding:8px;width:80%;vertical-align:middle">
+        <td style="padding:12px;width:82%;vertical-align:top">
           <papertitle>3DGS implementation for Structured-NeRF: Hierarchical Scene Graph with Neural Representation</papertitle>
           <br>
             <em>DISCOVER Robotics</em>
           <br>
             <strong><em>2023-11</em></strong>
           <br>
-            <em>[<a href="https://www.ecva.net/papers/eccv_2024/papers_ECCV/papers/05154.pdf">paper</a>]</em>
-            /
-            <em>[<a href="https://github.com/BigCiLeng/assist-gs">code</a>]</em>
-          <br>
-          <p>
+            <div class="paper-links">
+              <a href="https://www.ecva.net/papers/eccv_2024/papers_ECCV/papers/05154.pdf" class="paper-icon paper-icon" title="Paper">
+                <i class="fas fa-file-pdf"></i>
+                <span>Paper</span>
+              </a>
+              <a href="https://github.com/BigCiLeng/assist-gs" class="paper-icon code-icon" title="Code">
+                <i class="fab fa-github"></i>
+                <span>Code</span>
+              </a>
+            </div>
+          <p style="margin:2px 0;line-height:1.4;">
             I use 3D Gaussian Splatting and nerfstudio to build an implementation, 
             which can accomplish the 3D scene decomposition and Reconstruction.
           </p>
@@ -491,7 +567,7 @@
 
       <!-- randla-randlasqn -->
       <tr onmouseout="randla_stop()" onmouseover="randla_stop()">
-          <td style="padding:16px;width:20%;vertical-align:middle">
+          <td style="padding:12px;width:18%;vertical-align:top">
               <div class="one">
               <div class="two" id='randla_image'><video  width=100% muted autoplay loop>
               <source src="research/other/randla.png" type="video/png">
@@ -510,16 +586,23 @@
               randla_stop()
               </script>
           </td>
-          <td style="padding:8px;width:80%;vertical-align:middle">
+          <td style="padding:12px;width:82%;vertical-align:top">
               <papertitle>Pytorch-Lightning Implementation of RandLA-Net && SQN</papertitle>
               <br>
                 <strong><em>2023-10</em></strong>
               <br>
-              <em>[<a href="https://github.com/BigCiLeng/RandLA_pl"><em>code (RandLA)</em></a>]</em>
-              /
-              <em>[<a href="https://github.com/BigCiLeng/SQN_pl"><em>code (SQN)</em></a>]</em>
+              <div class="paper-links">
+                <a href="https://github.com/BigCiLeng/RandLA_pl" class="paper-icon code-icon" title="RandLA Code">
+                  <i class="fab fa-github"></i>
+                  <span>RandLA</span>
+                </a>
+                <a href="https://github.com/BigCiLeng/SQN_pl" class="paper-icon code-icon" title="SQN Code">
+                  <i class="fab fa-github"></i>
+                  <span>SQN</span>
+                </a>
+              </div>
               <p></p>
-              <p>
+              <p style="margin:2px 0;line-height:1.4;">
               <a href="https://arxiv.org/abs/1911.11236">RandLA-Net</a> (CVPR2020) is a light net which can process efficient semantic segmentation for 3D point clouds,
               and <a href="https://arxiv.org/abs/2104.04891">SQN</a> (ECCV2022) achieves promising performance on seven large-scale open datasets under weak supervision schemes.
               </p>
@@ -528,7 +611,7 @@
 
       <!-- STEM EXAM -->
       <tr onmouseout="stemExam_stop()" onmouseover="stemExam_stop()" >
-          <td style="padding:16px;width:20%;vertical-align:middle">
+          <td style="padding:12px;width:18%;vertical-align:top">
               <div class="one">
               <a href="research/other/rag.png"><img src='research/other/rag.png' width=100%></a>
               </div>
@@ -543,7 +626,7 @@
               stemExam_stop()
               </script>
           </td>
-          <td style="padding:8px;width:80%;vertical-align:middle">
+          <td style="padding:12px;width:82%;vertical-align:top">
               <papertitle>LLM Science Exam - Use LLMs to answer difficult science questions</papertitle>
               <br>
                 <strong>Nan Wang</strong>,
@@ -552,8 +635,13 @@
               <br>
                 <strong><em>Kaggle, 2023-10</em></strong>
               <br>
-                <em>[</em><a href="https://github.com/490CAD/LLM4Science">code</em></a>]</em>
-              <p>
+                <div class="paper-links">
+                  <a href="https://github.com/490CAD/LLM4Science" class="paper-icon code-icon" title="Code">
+                    <i class="fab fa-github"></i>
+                    <span>Code</span>
+                  </a>
+                </div>
+              <p style="margin:2px 0;line-height:1.4;">
                 LLM4Science 🥈 silver medal solution. We make it into a RAG (Retrieval Augmented Generation) task and finetune three Deberta models with different finetuning and combine their output features to infer the right answer. 
               </p>
           </td>
@@ -568,7 +656,7 @@
               </td>
             </tr>
           </tbody></table>
-          <table style="width:100%;border:0px;border-spacing:0px 10px;border-collapse:separate;margin-right:auto;margin-left:auto;"><tbody>
+          <table style="width:100%;border:0px;border-spacing:0px 8px;border-collapse:separate;margin-right:auto;margin-left:auto;"><tbody>
       <!-- write Bio here -->
       <tr>
         <td style=padding:00px;width:22%;vertical-align:middle;padding-left:20px>
@@ -607,13 +695,13 @@
             </tbody></table>
             <table width="100%" align="center" border="0" cellspacing="0" cellpadding="15"><tbody>
               <div class="icon-container">
-                <a href="https://www.baai.ac.cn/"><img src="images/baai_logo.png" alt="BAAI"></a>
-                <a href="https://www.noematrix.ai/"><img src="images/noematrix_logo.png" alt="NoemaTrix"></a>
-                <a href="https://www.mi.com/cyberone"><img src="images/mi_logo.png" alt="Xiaomi CyberOne" style="height: 80px;"></a>
-                <a href="https://en.megvii.com/"><img src="images/megvii_logo.png" alt="Megvii"></a>
-                <a href="https://air.tsinghua.edu.cn/"><img src="images/air_discover.png" alt="AIR Tsinghua"></a>
-                <a href="https://see.tongji.edu.cn/index.htm"><img src="images/tj.png" alt="Tongji University"></a>
-                <a href="https://www.swjtu.edu.cn/"><img src="images/swjtu.png" alt="SWJTU"></a>
+                <a href="https://www.baai.ac.cn/"><img src="images/baai_logo.png" alt="BAAI" loading="lazy"></a>
+                <a href="https://www.noematrix.ai/"><img src="images/noematrix_logo.png" alt="NoemaTrix" loading="lazy"></a>
+                <a href="https://www.mi.com/cyberone"><img src="images/mi_logo.png" alt="Xiaomi CyberOne" style="height: 80px;" loading="lazy"></a>
+                <a href="https://en.megvii.com/"><img src="images/megvii_logo.png" alt="Megvii" loading="lazy"></a>
+                <a href="https://air.tsinghua.edu.cn/"><img src="images/air_discover.png" alt="AIR Tsinghua" loading="lazy"></a>
+                <a href="https://see.tongji.edu.cn/index.htm"><img src="images/tj.png" alt="Tongji University" loading="lazy"></a>
+                <a href="https://www.swjtu.edu.cn/"><img src="images/swjtu.png" alt="SWJTU" loading="lazy"></a>
               </div>
             </tbody></table>
           </div>
@@ -622,84 +710,60 @@
     </tbody></table>
 
 
-    <!-- Mics -->
           <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;"><tbody>
               <tr>
               <td style="padding:16px;width:100%;vertical-align:middle">
                 <h2>Misc</h2>
+                <div class="misc-container">
+                  <div class="misc-grid">
+                    <div class="misc-category">
+                      <sub_heading>Music 🎶</sub_heading>
+                      <li>Piano 🎹 (Grade 10 certification from <a href="https://www.shcmusic.edu.cn/main.htm">Shanghai Conservatory of Music</a>)</li>
+                    </div>
+                    <div class="misc-category">
+                      <sub_heading>Sports 🏃‍♂️</sub_heading>
+                      <li>Basketball🏀</li>
+                      <li>Badminton🏸</li>
+                      <li>Swimming 🏊‍</li>
+                      <li>Flying Disc🥏</li>
+                    </div>
+                    <div class="misc-category">
+                      <sub_heading>Language 💬</sub_heading>
+                      <li>中文 🇨🇳</li>
+                      <li>English 🇺🇸</li>
+                      <li>日本語 🇯🇵 (learning)</li>
+                      <li>Français 🇫🇷 (learning)</li>
+                    </div>
+                    <div class="misc-category">
+                      <sub_heading>Others 💡</sub_heading>
+                      <li><a href="GS_Guangfulin/index.html">Guangfulin</a></li>
+                    </div>
+                  </div>
+                </div>
               </td>
             </tr>
           </tbody></table>
-          <table style="width:100%;border:0px;border-spacing:0px 10px;border-collapse:separate;margin-right:auto;margin-left:auto;"><tbody>
-      <tr>
-        <td style="padding:10px;width:15%;vertical-align:top">
-          <sub_heading>Music 🎶</sub_heading>
-          <br><br>
-          <li>Piano 🎹 (Grade 10 certification from <a href="https://www.shcmusic.edu.cn/main.htm">Shanghai Conservatory of Music</a>)</li>
-        </td>
-        <td style="padding:10px;width:15%;vertical-align:top">
-          <sub_heading>Sports 🏃‍♂️</sub_heading>
-          <br><br>
-          <li>Basketball🏀</li>
-          <br>
-          <li>Badminton🏸</li>
-          <br>
-          <li>Swimming 🏊‍</li>
-          <br>
-          <li>Flying Disc🥏</li>
-        </td>
-        <td style="padding:10px;width:15%;vertical-align:top">
-          <sub_heading>Language 💬</sub_heading>
-          <br><br>
-          <li>中文 🇨🇳</li>
-          <br>
-          <li>English 🇺🇸</li>
-          <br>
-          <li>日本語 🇯🇵 (learning)</li>
-          <br>
-          <li>Français 🇫🇷 (learning)</li>
-        </td>
-        <td style="padding:10px;width:15%;vertical-align:top">
-          <sub_heading>Others 💡</sub_heading>
-          <br><br>
-          <li><a href="GS_Guangfulin/index.html">Guangfulin</a></li>
-        </td>
-      </tr>
-    </tbody></table>
 
-    <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;"><tbody>
-      <tr>
-      <td style="padding:20px;width:100%;vertical-align:middle;text-align: right;">
-        Last updated on 2025/06/10
-      </td>
-      </tr>
-    </tbody></table>
-
-    <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;">
-      <tbody>
-        <tr>
-          <td style="padding:20px;width:100%;vertical-align:middle">
-            <script type='text/javascript' id='clustrmaps' src='//cdn.clustrmaps.com/map_v2.js?cl=080808&w=300&t=n&d=ccCu5-uOBoVcvpE3u-pG7b3M7VWrbHepzobmvjKerJg&co=ffffff&ct=808080&cmo=3acc3a&cmn=ff5353'></script>
-          </td>
-        </tr>
-        <div class="footer-copyright center black-text">
-          Copyright © Nan Wang 2024-2025
-        </div>  
-      </tbody>
-    </table>
-
-    <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;"><tbody>
-      <tr>
-        <td style="padding:0px">
-          <br>
-          <p style="text-align:right;font-size:small;">
-            Feel free to steal this website's <a href="https://github.com/jonbarron/jonbarron_website">source code</a>. <strong>Do not</strong> scrape the HTML from this page itself, as it includes analytics tags that you do not want on your own website &mdash; use the github code instead. Also, consider using <a href="https://leonidk.com/">Leonid Keselman</a>'s <a href="https://github.com/leonidk/new_website">Jekyll fork</a> of this page.
-          </p>
-        </td>
-      </tr>
-    </tbody></table>
+    <div class="footer-info">
+      <div class="footer-content">
+        <div class="visitor-map">
+          <script type='text/javascript' id='clustrmaps' src='//cdn.clustrmaps.com/map_v2.js?cl=080808&w=300&t=n&d=ccCu5-uOBoVcvpE3u-pG7b3M7VWrbHepzobmvjKerJg&co=ffffff&ct=808080&cmo=3acc3a&cmn=ff5353'></script>
+          <noscript>
+            <a href="https://clustrmaps.com/site/1c8x4" title="Visit tracker">
+              <img src="//www.clustrmaps.com/map_v2.png?cl=080808&w=300&t=n&d=ccCu5-uOBoVcvpE3u-pG7b3M7VWrbHepzobmvjKerJg&co=ffffff&ct=808080&cmo=3acc3a&cmn=ff5353" />
+            </a>
+          </noscript>
+        </div>
+        <div class="footer-bottom">
+          <span class="copyright">Copyright © Nan Wang 2024-2025</span>
+          <span class="separator">•</span>
+          <span class="last-updated">Last updated: 2025/06/10</span>
+        </div>
+      </div>
+    </div>
 </td>
 </tr>
 </table>
+</div>
 </body>
 </html>
