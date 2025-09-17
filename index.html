@@ -164,6 +164,60 @@
         </td>
       </tr>
 
+      <!-- oneposeviagen -->
+      <tr onmouseout="oneposeviagen_start()" onmouseover="oneposeviagen_stop()">
+        <td style="padding:12px;width:18%;vertical-align:top">
+          <div class="one">
+            <div class="two" id='oneposeviagen_img'><video width=100% height=100% muted autoplay loop>
+            <source src="research/oneposeviagen/oneposeviagen-demo.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+            </video></div>
+            <img src="research/oneposeviagen/oneposeviagen-demo.png" width="160" loading="lazy">
+          </div>
+          <script type="text/javascript">
+            function oneposeviagen_start() {
+              document.getElementById('oneposeviagen_img').style.opacity = "1";
+            }
+
+            function oneposeviagen_stop() {
+              document.getElementById('oneposeviagen_img').style.opacity = "0";
+            }
+            oneposeviagen_stop()
+          </script>
+        </td>
+        <td style="padding:12px;width:82%;vertical-align:top">
+          <papertitle>One View, Many Worlds: Single-Image to 3D Object Meets Generative Domain Randomization for One-Shot 6D Pose Estimation</papertitle>
+          <br>
+            <a href="https://github.com/GZWSAMA">Zheng Geng</a>,
+            <strong>Nan Wang</strong>,
+            <a href="https://daniellli.github.io/">Shaocong Xu</a>,
+            <a href="https://github.com/hugoycj">Chongjie Ye</a>,
+            <a href="https://scholar.google.com/citations?user=V-YdQiAAAAAJ">Bohan Li</a>,
+            <a href="https://scholar.google.com/citations?user=HsV0WbwAAAAJ">Zhaoxi Chen</a>,
+            <a href="https://pengsida.net/">Sida Peng</a>,
+            <a href="https://scholar.google.com.hk/citations?user=ygQznUQAAAAJ&amp;hl=en">Hao Zhao</a>
+          <br>
+            <strong><em>arXiv, 2025</em></strong>
+          <br>
+            <div class="paper-links">
+              <a href="https://gzwsama.github.io/OnePoseviaGen.github.io/" class="paper-icon project-icon">
+                <i class="fas fa-globe"></i>
+                <span>Project</span>
+              </a>
+              <a href="https://arxiv.org/abs/2509.07978" class="paper-icon arxiv-icon">
+                <i class="ai ai-arxiv"></i>
+                <span>Paper</span>
+              </a>
+              <a href="https://github.com/GZWSAMA/OnePoseviaGen/tree/main" class="paper-icon code-icon">
+                <i class="fab fa-github"></i>
+                <span>Code</span>
+              </a>
+            </div>
+          <p style="margin:2px 0;line-height:1.4;"> 
+            We use Multi-Scale Bilateral Grids that improves geometric accuracy in driving scene reconstruction through enhancing photometric consistency.
+          </p >
+        </td>
+      </tr>
 
       <!-- bilateraldriving -->
       <tr onmouseout="bilateraldriving_start()" onmouseover="bilateraldriving_stop()">
