@@ -1424,11 +1424,23 @@ tr[onmouseout]:hover papertitle:before {
   color: #374151;
 }
 
-.twitter-icon:hover {
-  background: linear-gradient(135deg, #f0f9ff 0%, #e0f2fe 100%);
+.x-custom-icon {
+  font-size: 20px;
+  color: var(--text-secondary);
+  transition: all 0.3s ease;
+  display: block;
+  font-weight: bold;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Helvetica', 'Arial', sans-serif;
+  text-align: center;
+  line-height: 1;
 }
-.twitter-icon:hover i {
-  color: #0284c7;
+
+.x-icon:hover {
+  background: linear-gradient(135deg, #f9fafb 0%, #f3f4f6 100%);
+}
+.x-icon:hover .x-custom-icon {
+  color: #000000;
+  transform: scale(1.1);
 }
 
 /* 论文链接图标样式 */
