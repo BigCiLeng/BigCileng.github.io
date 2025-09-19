@@ -27,6 +27,7 @@
         }
       </style>
     <script src="scripts/functions.js"></script>
+    <script src="scripts/theme-manager.js"></script>
   </head>
 
   <body>
@@ -82,12 +83,13 @@
                 <h2>News</h2>
           <div class="news">
             <ul style="text-align:justify;height: 150px;">
-              <li><strong class="newnew">[09-2025]</strong> Our HOLO is is accepted to WACV 2026.</a></li>
+              <li><strong class="newnew">[09-2025]</strong> Our <a href="https://bigcileng.github.io/bilateral-driving/">BilateralDriving</a> is accepted to NeurIPS 2025.</a></li>
+              <li><strong class="newnew">[09-2025]</strong> Our HOLO is accepted to WACV 2026.</a></li>
               <li><strong class="newnew">[08-2025]</strong> Our <a href="https://gzwsama.github.io/OnePoseviaGen.github.io/">OnePoseviaGen</a> is accepted to CoRL 2025 as <strong>Oral.</strong></li>
               <li><strong class="newnew">[06-2025]</strong> Our <a href="https://bigcileng.github.io/bilateral-driving/">BilateralDriving</a> is now available.</li>
               <li><strong class="newnew">[02-2025]</strong> I have been on an internship at <a href="https://www.baai.ac.cn/">Beijing Academy of Artificial Intelligence</a>. </li>
               <li><strong class="newnew">[02-2025]</strong> Two papers are accepted to ICRA 2025. </li>
-              <li><strong class="newnew">[01-2025]</strong> One paper was accepted to ICASSP 2025. </li>
+              <li><strong class="newnew">[01-2025]</strong> SGGS is accepted to ICASSP 2025. </li>
               <li><strong>[10-2024]</strong> I have been on an internship at <a href="https://www.noematrix.ai/">Shanghai Noematrix Intelligence Technology Ltd</a>. </li>
               <li><strong>[05-2024]</strong> I have been on an internship at <a href="https://www.mi.com/cyberone">Xiaomi Robot Technology</a>. </li>
               <li><strong>[03-2024]</strong> I have been on an internship at <a href="https://www.megvii.com/">Megvii</a>. </li>
@@ -110,6 +112,67 @@
             </tr>
           </tbody></table>
           <table style="width:100%;border:0px;border-spacing:0px 8px;border-collapse:separate;margin-right:auto;margin-left:auto;"><tbody>
+
+      <!-- bilateraldriving -->
+      <tr onmouseout="bilateraldriving_start()" onmouseover="bilateraldriving_stop()" bgcolor="#ffffd0">
+        <td style="padding:12px;width:18%;vertical-align:top">
+          <div class="one">
+            <div class="two" id='bilateraldriving_img'><video width=100% height=100% muted autoplay loop>
+            <source src="research/bilateraldriving-demo/bilateraldriving-demo.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+            </video></div>
+            <img src="research/bilateraldriving-demo/bilateraldriving-demo-cover.jpg" width="160" loading="lazy">
+          </div>
+          <script type="text/javascript">
+            function bilateraldriving_start() {
+              document.getElementById('bilateraldriving_img').style.opacity = "1";
+            }
+
+            function bilateraldriving_stop() {
+              document.getElementById('bilateraldriving_img').style.opacity = "0";
+            }
+            bilateraldriving_stop()
+          </script>
+        </td>
+        <td style="padding:12px;width:82%;vertical-align:top">
+          <papertitle>Unifying Appearance Codes and Bilateral Grids for Driving Scene Gaussian Splatting</papertitle>
+          <br>
+            <strong>Nan Wang</strong>,
+            <a href="https://tao-11-chen.github.io/">Yuantao Chen</a>,
+            <a href="https://li-xingxiao.github.io/homepage/">Lixing Xiao</a>,
+            <a href="https://scholar.google.com.hk/citations?user=v0iwkScAAAAJ&amp;hl=en&amp;oi=sra">Weiqing Xiao</a>,
+            <a href="https://scholar.google.com/citations?user=V-YdQiAAAAAJ">Bohan Li</a>,
+            <a href="https://scholar.google.com/citations?user=HsV0WbwAAAAJ">Zhaoxi Chen</a>,
+            <a href="https://github.com/hugoycj">Chongjie Ye</a>,
+            <a href="https://daniellli.github.io/">Shaocong Xu</a>,
+            <a href="https://scholar.google.com/citations?user=P4efBMcAAAAJ">Saining Zhang</a>,
+            <a href="https://ziyangyan.github.io/">Ziyang Yan</a>,
+            <a href="https://scholar.google.com.hk/citations?user=NMSccqAAAAAJ">Pierre Merriaux</a>,
+            <a href="">Lei Lei</a>,
+            <a href="https://tianfan.info/">Tianfan Xue</a>,
+            <a href="https://scholar.google.com.hk/citations?user=ygQznUQAAAAJ&amp;hl=en">Hao Zhao</a>
+          <br>
+            <strong><em>NeurIPS, 2025</em></strong>
+          <br>
+            <div class="paper-links">
+              <a href="https://bigcileng.github.io/bilateral-driving/" class="paper-icon project-icon">
+                <i class="fas fa-globe"></i>
+                <span>Project</span>
+              </a>
+              <a href="https://arxiv.org/abs/2506.05280" class="paper-icon arxiv-icon">
+                <i class="ai ai-arxiv"></i>
+                <span>Paper</span>
+              </a>
+              <a href="https://github.com/BigCiLeng/bilateral-driving" class="paper-icon code-icon">
+                <i class="fab fa-github"></i>
+                <span>Code</span>
+              </a>
+            </div>
+          <p style="margin:2px 0;line-height:1.4;"> 
+            We use Multi-Scale Bilateral Grids that improves geometric accuracy in driving scene reconstruction through enhancing photometric consistency.
+          </p >
+        </td>
+      </tr>
 
       <!-- holo -->
       <tr onmouseout="holo_start()" onmouseover="holo_stop()">
@@ -136,7 +199,7 @@
           <papertitle>HOLO: Holistic Lightweight Optimization for Scene Understanding with Auto-Annotation and Multimodal Learning</papertitle>
           <br>
             Xiaoyun Hu*, 
-            <a href="https://micro-han.github.io/">Xiaohan Yan</a>,
+            <a href="https://micro-han.github.io/">Xiaohan Yan*</a>,
             <strong>Nan Wang</strong>,
             <a href="https://kevinsong729.github.io/">Xiaowei Song</a>,
             Gang Wei, 
@@ -197,7 +260,7 @@
             <a href="https://pengsida.net/">Sida Peng</a>,
             <a href="https://scholar.google.com.hk/citations?user=ygQznUQAAAAJ&amp;hl=en">Hao Zhao</a>
           <br>
-            <strong><em>arXiv, 2025</em></strong>
+            <strong><em>CoRL, 2025, Oral presentation</em></strong>
           <br>
             <div class="paper-links">
               <a href="https://gzwsama.github.io/OnePoseviaGen.github.io/" class="paper-icon project-icon">
@@ -212,6 +275,10 @@
                 <i class="fab fa-github"></i>
                 <span>Code</span>
               </a>
+              <a href="https://huggingface.co/spaces/ZhengGeng/OnePoseviaGen" class="paper-icon hf-icon">
+                <i class="fas fa-robot"></i>
+                <span>Hugging Face Demo</span>
+              </a>
             </div>
           <p style="margin:2px 0;line-height:1.4;"> 
             We use 3D Generative Model to generate the 3D object and then utilize it to estimate accurate 6D pose.
@@ -219,68 +286,124 @@
         </td>
       </tr>
 
-      <!-- bilateraldriving -->
-      <tr onmouseout="bilateraldriving_start()" onmouseover="bilateraldriving_stop()">
+      <!-- saradar -->
+      <tr onmouseout="saradar_start()" onmouseover="saradar_stop()">
         <td style="padding:12px;width:18%;vertical-align:top">
           <div class="one">
-            <div class="two" id='bilateraldriving_img'><video width=100% height=100% muted autoplay loop>
-            <source src="research/bilateraldriving-demo/bilateraldriving-demo.mp4" type="video/mp4">
+            <div class="two" id='saradar_img'><video width=100% height=100% muted autoplay loop>
+            <source src="research/saradar-demo/saradar-demo.mp4" type="video/mp4">
             Your browser does not support the video tag.
             </video></div>
-            <img src="research/bilateraldriving-demo/bilateraldriving-demo-cover.jpg" width="160" loading="lazy">
+            <img src="research/saradar-demo/saradar-demo.png" width="160" loading="lazy">
           </div>
           <script type="text/javascript">
-            function bilateraldriving_start() {
-              document.getElementById('bilateraldriving_img').style.opacity = "1";
+            function saradar_start() {
+              document.getElementById('saradar_img').style.opacity = "1";
             }
 
-            function bilateraldriving_stop() {
-              document.getElementById('bilateraldriving_img').style.opacity = "0";
+            function saradar_stop() {
+              document.getElementById('saradar_img').style.opacity = "0";
             }
-            bilateraldriving_stop()
+            saradar_stop()
           </script>
         </td>
         <td style="padding:12px;width:82%;vertical-align:top">
-          <papertitle>Unifying Appearance Codes and Bilateral Grids for Driving Scene Gaussian Splatting</papertitle>
+          <papertitle>Simulate Any Radar: Attribute-Controllable Radar Simulation via Waveform Parameter Embedding</papertitle>
           <br>
+            <a href="https://scholar.google.com.hk/citations?user=v0iwkScAAAAJ">Weiqing Xiao*</a>,
+            Hao Huang*,
+            <a href="https://zhuxing0.github.io/projects/SA-Radar/">Chonghao Zhong*</a>,
+            Yujie Lin,
             <strong>Nan Wang</strong>,
-            <a href="https://tao-11-chen.github.io/">Yuantao Chen</a>,
-            <a href="https://li-xingxiao.github.io/homepage/">Lixing Xiao</a>,
-            <a href="https://scholar.google.com.hk/citations?user=v0iwkScAAAAJ&amp;hl=en&amp;oi=sra">Weiqing Xiao</a>,
-            <a href="https://scholar.google.com/citations?user=V-YdQiAAAAAJ">Bohan Li</a>,
+            <a href="https://scholar.google.com.hk/citations?hl=en&user=_tz64W0AAAAJ">Xiaoxue Chen</a>,
             <a href="https://scholar.google.com/citations?user=HsV0WbwAAAAJ">Zhaoxi Chen</a>,
-            <a href="https://github.com/hugoycj">Chongjie Ye</a>,
-            <a href="https://daniellli.github.io/">Shaocong Xu</a>,
             <a href="https://scholar.google.com/citations?user=P4efBMcAAAAJ">Saining Zhang</a>,
-            <a href="https://ziyangyan.github.io/">Ziyang Yan</a>,
+            <a href="https://scholar.google.com.hk/citations?hl=en&user=XISZWXgAAAAJ">Shuocheng Yang</a>,
             <a href="https://scholar.google.com.hk/citations?user=NMSccqAAAAAJ">Pierre Merriaux</a>,
             <a href="">Lei Lei</a>,
-            <a href="https://tianfan.info/">Tianfan Xue</a>,
             <a href="https://scholar.google.com.hk/citations?user=ygQznUQAAAAJ&amp;hl=en">Hao Zhao</a>
           <br>
             <strong><em>arXiv, 2025</em></strong>
           <br>
             <div class="paper-links">
-              <a href="https://bigcileng.github.io/bilateral-driving/" class="paper-icon project-icon">
+              <a href="https://zhuxing0.github.io/projects/SA-Radar/" class="paper-icon project-icon">
                 <i class="fas fa-globe"></i>
                 <span>Project</span>
               </a>
-              <a href="https://arxiv.org/abs/2506.05280" class="paper-icon arxiv-icon">
+              <a href="https://arxiv.org/abs/2506.03134" class="paper-icon arxiv-icon">
                 <i class="ai ai-arxiv"></i>
                 <span>Paper</span>
               </a>
-              <a href="https://github.com/BigCiLeng/bilateral-driving" class="paper-icon code-icon">
+              <a href="https://github.com/zhuxing0/SA-Radar" class="paper-icon code-icon">
                 <i class="fab fa-github"></i>
                 <span>Code</span>
               </a>
             </div>
           <p style="margin:2px 0;line-height:1.4;"> 
-            We use Multi-Scale Bilateral Grids that improves geometric accuracy in driving scene reconstruction through enhancing photometric consistency.
+            We present SA-Radar, a radar simulation approach that enables controllable and efficient generation of radar cubes conditioned on customizable radar attributes.
           </p >
         </td>
       </tr>
 
-      <tr onmouseout="pugs_start()" onmouseover="pugs_stop()">
+      <!-- orv -->
+      <tr onmouseout="orv_start()" onmouseover="orv_stop()">
+        <td style="padding:12px;width:18%;vertical-align:top">
+          <div class="one">
+            <div class="two" id='orv_img'><video width=100% height=100% muted autoplay loop>
+            <source src="research/orv-demo/orv-demo.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+            </video></div>
+            <img src="research/orv-demo/orv-demo.png" width="160" loading="lazy">
+          </div>
+          <script type="text/javascript">
+            function orv_start() {
+              document.getElementById('orv_img').style.opacity = "1";
+            }
+
+            function orv_stop() {
+              document.getElementById('orv_img').style.opacity = "0";
+            }
+            orv_stop()
+          </script>
+        </td>
+        <td style="padding:12px;width:82%;vertical-align:top">
+          <papertitle>ORV: 4D Occupancy-centric Robot Video Generation</papertitle>
+          <br>
+            <a href="https://github.com/OrangeSodahub">Xiuyu Yang*</a>,
+            <a href="https://scholar.google.com/citations?user=V-YdQiAAAAAJ">Bohan Li*</a>,
+            <a href="https://daniellli.github.io/">Shaocong Xu</a>,
+            <strong>Nan Wang</strong>,
+            <a href="https://github.com/hugoycj">Chongjie Ye</a>,
+            <a href="https://scholar.google.com/citations?user=HsV0WbwAAAAJ">Zhaoxi Chen</a>,
+            <a href="https://scholar.google.com/citations?user=ngEXyLkAAAAJ">Minghan Qin</a>,
+            <a href="https://scholar.google.com/citations?user=gdP9StQAAAAJ">Yikang Ding</a>,
+            <a href="https://scholar.google.com/citations?hl=zh-CN&user=byaSC-kAAAAJ">Xin Jin</a>,
+            <a href="https://scholar.google.com/citations?user=DmahiOYAAAAJ">Hang Zhao</a>,
+            <a href="https://scholar.google.com.hk/citations?user=ygQznUQAAAAJ&amp;hl=en">Hao Zhao</a>
+          <br>
+            <strong><em>arXiv, 2025</em></strong>
+          <br>
+            <div class="paper-links">
+              <a href="https://orangesodahub.github.io/ORV/" class="paper-icon project-icon">
+                <i class="fas fa-globe"></i>
+                <span>Project</span>
+              </a>
+              <a href="https://arxiv.org/abs/2506.03079" class="paper-icon arxiv-icon">
+                <i class="ai ai-arxiv"></i>
+                <span>Paper</span>
+              </a>
+              <a href="https://github.com/OrangeSodahub/ORV" class="paper-icon code-icon">
+                <i class="fab fa-github"></i>
+                <span>Code</span>
+              </a>
+            </div>
+          <p style="margin:2px 0;line-height:1.4;"> 
+            We propose ORV, an Occupancy-centric Robot Video generation framework.
+          </p >
+        </td>
+      </tr>
+
+      <tr onmouseout="pugs_start()" onmouseover="pugs_stop()" bgcolor="#ffffd0">
         <td style="padding:12px;width:18%;vertical-align:top">
           <div class="one">
             <div class="two" id='pugs_img'><video width=100% muted autoplay loop>
@@ -347,9 +470,9 @@
         <td style="padding:12px;width:82%;vertical-align:top">
           <papertitle>RE0: Recognize Everything with 3D Zero-shot Open-Vocabulary Instance Segmentation</papertitle>
           <br>
-            <a href="https://micro-han.github.io/">Xiaohan Yan</a>,
-            Zijian Jiang,
-            <a href="https://github.com/EverNorif">Yinghao Shuai</a>,
+            <a href="https://micro-han.github.io/">Xiaohan Yan*</a>,
+            Zijian Jiang*,
+            <a href="https://github.com/EverNorif">Yinghao Shuai*</a>,
             <strong>Nan Wang</strong>,
             <a href="https://kevinsong729.github.io/">Xiaowei Song</a>,
             <a href="https://fusheng-ji.github.io/">Wenbo Ji</a>,
@@ -380,7 +503,7 @@
         </td>
       </tr>
 
-      <tr onmouseout="sggs_start()" onmouseover="sggs_stop()">
+      <tr onmouseout="sggs_start()" onmouseover="sggs_stop()" bgcolor="#ffffd0">
         <td style="padding:12px;width:18%;vertical-align:top">
           <div class="one">
             <div class="two" id='sggs_img'><video width=100% height=100% muted autoplay loop>
@@ -416,11 +539,11 @@
                 <i class="fas fa-file-pdf"></i>
                 <span>Paper</span>
               </a>
-              <a href="https://github.com/BigCiLeng/SGGS" class="paper-icon code-icon" title="Code">
+              <!-- <a href="https://github.com/BigCiLeng/SGGS" class="paper-icon code-icon" title="Code">
                 <i class="fab fa-github"></i>
                 <span>Code</span>
-              </a>
-              <a href="research/SGGS-Poster.pdf" class="paper-icon poster-icon" title="Poster">
+              </a> -->
+              <a href="research/sggs-demo/SGGS-Poster.pdf" class="paper-icon poster-icon" title="Poster">
                 <i class="fas fa-image"></i>
                 <span>Poster</span>
               </a>
@@ -464,7 +587,7 @@
             Shengchuan Zhang, 
             Rongrong Ji
           <br>
-            <strong><em>ICIC, 2024, oral</em></strong>
+            <strong><em>ICIC, 2024, Oral presentation</em></strong>
           <br>
             <div class="paper-links">
               <a href="https://dl.acm.org/doi/10.1007/978-981-97-5663-6_41" class="paper-icon paper-icon" title="Paper">
@@ -724,7 +847,7 @@
             <br><br>
             I was born on Oct 10th, 2000 in <a href="https://en.wikipedia.org/wiki/Dengfeng">Dengfeng</a>, China, which is home to various religious institutions and famous temples and located at the foot of the Mount Song, one of the most sacred mountains in China.
             <br><br>
-            I alse took many Biology & Chemistry courses during my initial 2 years in University. 
+            I also took many Biology & Chemistry courses during my initial 2 years in University. 
             <br><br>
             <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;"><tbody>
               <tr>
@@ -811,7 +934,7 @@
         <div class="footer-bottom">
           <span class="copyright">Copyright © Nan Wang 2024-2025</span>
           <span class="separator">•</span>
-          <span class="last-updated">Last updated: 2025/09/18</span>
+          <span class="last-updated">Last updated: 2025/09/19</span>
         </div>
       </div>
     </div>

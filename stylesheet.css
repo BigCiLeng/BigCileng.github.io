@@ -891,46 +891,45 @@ tr[onmouseout]:nth-child(3) { animation-delay: 0.3s; }
 tr[onmouseout]:nth-child(4) { animation-delay: 0.4s; }
 tr[onmouseout]:nth-child(5) { animation-delay: 0.5s; }
 
-/* 主题切换按钮样式 */
+/* 简约日夜切换按钮样式 */
 .theme-toggle-container {
   position: fixed;
-  top: 24px;
-  right: 24px;
+  top: 20px;
+  right: 20px;
   z-index: 1000;
 }
 
 .theme-toggle-btn {
-  width: 56px;
-  height: 56px;
-  border-radius: 50%;
-  border: none;
+  width: 40px;
+  height: 40px;
+  border-radius: 20px;
+  border: 1px solid var(--border-color);
   background: var(--bg-primary);
-  box-shadow: var(--shadow-lg);
+  box-shadow: var(--shadow-sm);
   cursor: pointer;
-  transition: all 0.3s ease;
+  transition: all 0.2s ease;
   position: relative;
   overflow: hidden;
   display: flex;
   align-items: center;
   justify-content: center;
-  backdrop-filter: blur(10px);
-  border: 2px solid var(--border-color);
+  backdrop-filter: blur(8px);
 }
 
 .theme-toggle-btn:hover {
-  transform: scale(1.1);
-  box-shadow: var(--shadow-colored);
+  transform: translateY(-1px);
+  box-shadow: var(--shadow-md);
   border-color: var(--blue-accent);
 }
 
 .theme-toggle-btn:active {
-  transform: scale(0.95);
+  transform: translateY(0);
 }
 
 .theme-icon {
-  font-size: 24px;
+  font-size: 18px;
   position: absolute;
-  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  transition: all 0.3s ease;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -956,16 +955,111 @@ tr[onmouseout]:nth-child(5) { animation-delay: 0.5s; }
   opacity: 1;
 }
 
-/* 夜间模式下的按钮样式 */
+/* 夜间模式下的简约按钮样式 */
 [data-theme="dark"] .theme-toggle-btn {
   background: var(--bg-primary);
   border-color: var(--border-color);
-  box-shadow: var(--shadow-lg), 0 0 20px rgba(96, 165, 250, 0.1);
+  box-shadow: var(--shadow-sm);
 }
 
 [data-theme="dark"] .theme-toggle-btn:hover {
-  box-shadow: var(--shadow-colored), 0 0 30px rgba(96, 165, 250, 0.2);
+  box-shadow: var(--shadow-md);
   border-color: var(--blue-accent);
+}
+
+/* 主题颜色选择器样式 - 已隐藏 */
+.theme-color-selector {
+  display: none;
+}
+
+.theme-selector-btn {
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  border: none;
+  background: var(--bg-primary);
+  box-shadow: var(--shadow-md);
+  cursor: pointer;
+  transition: all 0.3s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  backdrop-filter: blur(10px);
+  border: 2px solid var(--border-color);
+  font-size: 20px;
+  color: var(--text-secondary);
+}
+
+.theme-selector-btn:hover {
+  transform: scale(1.1);
+  box-shadow: var(--shadow-colored);
+  border-color: var(--blue-accent);
+  color: var(--blue-accent);
+}
+
+.theme-options {
+  position: absolute;
+  top: 100%;
+  right: 0;
+  margin-top: 8px;
+  background: var(--bg-primary);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-lg);
+  border: 1px solid var(--border-color);
+  padding: 12px;
+  min-width: 200px;
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(-10px);
+  transition: all 0.3s ease;
+  backdrop-filter: blur(20px);
+}
+
+.theme-options.show {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+}
+
+.theme-option {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  width: 100%;
+  padding: 8px 12px;
+  border: none;
+  background: transparent;
+  border-radius: var(--radius-md);
+  cursor: pointer;
+  transition: all 0.2s ease;
+  font-size: 14px;
+  color: var(--text-secondary);
+  text-align: left;
+}
+
+.theme-option:hover {
+  background: var(--bg-tertiary);
+  color: var(--text-primary);
+}
+
+.theme-option.active {
+  background: var(--blue-light);
+  color: var(--blue-accent);
+  font-weight: 600;
+}
+
+.theme-preview {
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  flex-shrink: 0;
+  border: 2px solid rgba(255, 255, 255, 0.2);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.theme-option.active .theme-preview {
+  border-color: var(--blue-accent);
+  box-shadow: 0 0 0 2px var(--blue-light), 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
 /* 响应式设计 */
@@ -976,12 +1070,29 @@ tr[onmouseout]:nth-child(5) { animation-delay: 0.5s; }
   }
   
   .theme-toggle-btn {
-    width: 48px;
-    height: 48px;
+    width: 36px;
+    height: 36px;
   }
   
   .theme-icon {
-    font-size: 20px;
+    font-size: 16px;
+  }
+  
+  .theme-options {
+    right: -8px;
+    min-width: 180px;
+    padding: 8px;
+  }
+  
+  .theme-option {
+    padding: 6px 8px;
+    font-size: 13px;
+    gap: 8px;
+  }
+  
+  .theme-preview {
+    width: 14px;
+    height: 14px;
   }
 }
 
@@ -1147,13 +1258,11 @@ html {
 /* 为夜间模式优化的高亮样式 */
 [data-theme="dark"] span.highlight::before {
   background: var(--highlight-soft);
-  box-shadow: 0 0 4px rgba(148, 163, 184, 0.15);
   opacity: 0.7;
 }
 
 [data-theme="dark"] span.highlight:hover::before {
-  background: linear-gradient(135deg, #334155 0%, #475569 50%, #64748b 100%);
-  box-shadow: 0 0 6px rgba(148, 163, 184, 0.2);
+  background: var(--highlight-soft);
   opacity: 0.9;
 }
 
@@ -1415,6 +1524,13 @@ tr[onmouseout]:hover papertitle:before {
 }
 .arxiv-icon:hover i {
   color: #b31b1b;
+}
+
+.hf-icon:hover {
+  background: linear-gradient(135deg, #fef3e2 0%, #fed7aa 100%);
+}
+.hf-icon:hover i {
+  color: #ea580c;
 }
 
 /* 响应式优化 */

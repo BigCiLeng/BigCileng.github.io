@@ -1,0 +1,118 @@
+{
+  "themes": {
+    "klein": {
+      "name": "Klein Blue",
+      "description": "经典艺术蓝色主题，深邃而优雅",
+      "colors": {
+        "primary": "#002fa7",
+        "primaryHover": "#001f73",
+        "primaryLight": "#0040d9",
+        "accent": "#64748b",
+        "accentHover": "#475569",
+        "accentLight": "#e2e8f0",
+        "highlight": "#eff6ff",
+        "highlightBorder": "#3b82f6"
+      }
+    },
+    "blue": {
+      "name": "经典蓝色",
+      "description": "学术专业的深蓝色主题",
+      "colors": {
+        "primary": "#1e40af",
+        "primaryHover": "#1d4ed8",
+        "primaryLight": "#2563eb",
+        "accent": "#64748b",
+        "accentHover": "#475569",
+        "accentLight": "#e2e8f0",
+        "highlight": "#fef3c7",
+        "highlightBorder": "#f59e0b"
+      }
+    },
+    "mint": {
+      "name": "薄荷绿",
+      "description": "清新优雅的薄荷绿主题",
+      "colors": {
+        "primary": "#407d52",
+        "primaryHover": "#356b45",
+        "primaryLight": "#4d9660",
+        "accent": "#64748b",
+        "accentHover": "#475569",
+        "accentLight": "#e2e8f0",
+        "highlight": "#f0fdf4",
+        "highlightBorder": "#4ade80"
+      }
+    },
+    "green": {
+      "name": "自然绿色",
+      "description": "清新自然的绿色主题",
+      "colors": {
+        "primary": "#059669",
+        "primaryHover": "#047857",
+        "primaryLight": "#10b981",
+        "accent": "#6b7280",
+        "accentHover": "#4b5563",
+        "accentLight": "#e5e7eb",
+        "highlight": "#fef3e2",
+        "highlightBorder": "#f59e0b"
+      }
+    },
+    "purple": {
+      "name": "优雅紫色",
+      "description": "高雅的紫色学术主题",
+      "colors": {
+        "primary": "#7c3aed",
+        "primaryHover": "#6d28d9",
+        "primaryLight": "#8b5cf6",
+        "accent": "#64748b",
+        "accentHover": "#475569",
+        "accentLight": "#e2e8f0",
+        "highlight": "#fef7ff",
+        "highlightBorder": "#c084fc"
+      }
+    },
+    "red": {
+      "name": "活力红色",
+      "description": "充满活力的红色主题",
+      "colors": {
+        "primary": "#dc2626",
+        "primaryHover": "#b91c1c",
+        "primaryLight": "#ef4444",
+        "accent": "#64748b",
+        "accentHover": "#475569",
+        "accentLight": "#e2e8f0",
+        "highlight": "#fef2f2",
+        "highlightBorder": "#f87171"
+      }
+    },
+    "teal": {
+      "name": "青蓝色",
+      "description": "现代科技感的青蓝色主题",
+      "colors": {
+        "primary": "#0d9488",
+        "primaryHover": "#0f766e",
+        "primaryLight": "#14b8a6",
+        "accent": "#64748b",
+        "accentHover": "#475569",
+        "accentLight": "#e2e8f0",
+        "highlight": "#f0fdfa",
+        "highlightBorder": "#5eead4"
+      }
+    },
+    "orange": {
+      "name": "温暖橙色",
+      "description": "温暖友好的橙色主题",
+      "colors": {
+        "primary": "#ea580c",
+        "primaryHover": "#c2410c",
+        "primaryLight": "#f97316",
+        "accent": "#64748b",
+        "accentHover": "#475569",
+        "accentLight": "#e2e8f0",
+        "highlight": "#fff7ed",
+        "highlightBorder": "#fb923c"
+      }
+    }
+  },
+  "defaultTheme": "klein",
+  "darkModeSupport": true
+}

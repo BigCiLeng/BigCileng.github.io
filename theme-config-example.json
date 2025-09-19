@@ -1,0 +1,47 @@
+{
+  "themes": {
+    "custom": {
+      "name": "自定义主题",
+      "description": "你的个性化主题",
+      "colors": {
+        "primary": "#your-primary-color",
+        "primaryHover": "#your-primary-hover-color",
+        "primaryLight": "#your-primary-light-color",
+        "accent": "#your-accent-color",
+        "accentHover": "#your-accent-hover-color",
+        "accentLight": "#your-accent-light-color",
+        "highlight": "#your-highlight-color",
+        "highlightBorder": "#your-highlight-border-color"
+      }
+    }
+  },
+  "instructions": {
+    "zh": {
+      "title": "主题配置说明",
+      "description": "通过修改 themes.json 文件来自定义你的主题颜色",
+      "steps": [
+        "1. 复制这个示例文件并重命名为 themes.json",
+        "2. 修改 colors 对象中的颜色值（使用十六进制颜色代码）",
+        "3. 可以添加多个主题，每个主题需要一个唯一的键名",
+        "4. 保存文件后刷新页面即可看到新主题",
+        "5. 使用右上角的调色板图标来切换主题"
+      ],
+      "colorGuide": {
+        "primary": "主色调 - 用于标题、链接等主要元素",
+        "primaryHover": "主色调悬停态 - 鼠标悬停时的颜色",
+        "primaryLight": "主色调浅色版本 - 用于背景等",
+        "accent": "强调色 - 用于次要元素",
+        "accentHover": "强调色悬停态",
+        "accentLight": "强调色浅色版本",
+        "highlight": "高亮背景色 - 用于文字高亮",
+        "highlightBorder": "高亮边框色 - 用于高亮元素的边框"
+      },
+      "tips": [
+        "建议使用在线调色板工具选择和谐的颜色搭配",
+        "确保颜色对比度足够，保证可读性",
+        "可以参考现有主题的颜色搭配",
+        "深色和浅色模式会自动调整，只需设置基础颜色"
+      ]
+    }
+  }
+}
