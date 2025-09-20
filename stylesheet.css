@@ -1114,6 +1114,74 @@ tr[onmouseout]:nth-child(5) { animation-delay: 0.5s; }
     transition: filter 0.3s ease;
   }
   
+  /* 暗色模式下所有按钮的悬停效果优化 */
+  
+  /* Project 按钮 - 金黄色主题 */
+  .project-icon:hover {
+    background: linear-gradient(135deg, rgba(251, 191, 36, 0.1) 0%, rgba(245, 158, 11, 0.15) 100%) !important;
+    box-shadow: 0 4px 12px rgba(251, 191, 36, 0.2) !important;
+  }
+  
+  .project-icon:hover i,
+  .project-icon:hover span {
+    color: #fbbf24 !important;
+  }
+  
+  /* Paper 按钮 - 温和红色主题 */
+  .paper-icon.paper-icon:hover {
+    background: linear-gradient(135deg, rgba(248, 113, 113, 0.1) 0%, rgba(239, 68, 68, 0.15) 100%) !important;
+    box-shadow: 0 4px 12px rgba(248, 113, 113, 0.2) !important;
+  }
+  
+  .paper-icon.paper-icon:hover i,
+  .paper-icon.paper-icon:hover span {
+    color: #f87171 !important;
+  }
+  
+  /* Code 按钮 - 温和绿色主题 */
+  .code-icon:hover {
+    background: linear-gradient(135deg, rgba(52, 211, 153, 0.1) 0%, rgba(16, 185, 129, 0.15) 100%) !important;
+    box-shadow: 0 4px 12px rgba(52, 211, 153, 0.2) !important;
+  }
+  
+  .code-icon:hover i,
+  .code-icon:hover span {
+    color: #34d399 !important;
+  }
+  
+  /* ArXiv 按钮 - 温和橙色主题 */
+  .arxiv-icon:hover {
+    background: linear-gradient(135deg, rgba(251, 146, 60, 0.1) 0%, rgba(249, 115, 22, 0.15) 100%) !important;
+    box-shadow: 0 4px 12px rgba(251, 146, 60, 0.2) !important;
+  }
+  
+  .arxiv-icon:hover i,
+  .arxiv-icon:hover span {
+    color: #fb923c !important;
+  }
+  
+  /* HuggingFace 按钮 - 温和紫色主题 */
+  .hf-icon:hover {
+    background: linear-gradient(135deg, rgba(168, 85, 247, 0.1) 0%, rgba(147, 51, 234, 0.15) 100%) !important;
+    box-shadow: 0 4px 12px rgba(168, 85, 247, 0.2) !important;
+  }
+  
+  .hf-icon:hover i,
+  .hf-icon:hover span {
+    color: #a855f7 !important;
+  }
+  
+  /* Poster 按钮 - 温和青色主题 */
+  .poster-icon:hover {
+    background: linear-gradient(135deg, rgba(56, 189, 248, 0.1) 0%, rgba(14, 165, 233, 0.15) 100%) !important;
+    box-shadow: 0 4px 12px rgba(56, 189, 248, 0.2) !important;
+  }
+  
+  .poster-icon:hover i,
+  .poster-icon:hover span {
+    color: #38bdf8 !important;
+  }
+  
   img:hover {
     filter: brightness(1) contrast(1);
   }
@@ -1516,6 +1584,9 @@ tr[onmouseout]:hover papertitle:before {
   background: linear-gradient(135deg, #eff6ff 0%, #dbeafe 100%);
 }
 .project-icon:hover i {
+  color: #2563eb;
+}
+.project-icon:hover span {
   color: #2563eb;
 }
 
