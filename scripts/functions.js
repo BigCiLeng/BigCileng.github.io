@@ -8,20 +8,44 @@
  * 
  * Copyright (c) 2023 by bigcileng@outlook.com, All Rights Reserved. 
  */
-function toggleblock(blockId)
-{
-   var block = document.getElementById(blockId);
-   if (block.style.display == 'none') {
-    block.style.display = 'block' ;
-   } else {
-    block.style.display = 'none' ;
-   }
+function toggleblock(blockId, trigger) {
+    var block = document.getElementById(blockId);
+    if (!block) {
+        return;
+    }
+
+    var isHidden = block.hasAttribute('hidden') || block.style.display === 'none' || block.dataset.visible === 'false';
+    if (isHidden) {
+        block.removeAttribute('hidden');
+        block.style.display = '';
+        block.removeAttribute('aria-hidden');
+        block.dataset.visible = 'true';
+    } else {
+        block.setAttribute('hidden', 'true');
+        block.style.display = 'none';
+        block.setAttribute('aria-hidden', 'true');
+        block.dataset.visible = 'false';
+    }
+
+    if (trigger) {
+        trigger.setAttribute('aria-expanded', isHidden ? 'true' : 'false');
+    }
 }
 
-function hideblock(blockId)
-{
-   var block = document.getElementById(blockId);
-   block.style.display = 'none' ;
+function hideblock(blockId, trigger) {
+    var block = document.getElementById(blockId);
+    if (!block) {
+        return;
+    }
+
+    block.setAttribute('hidden', 'true');
+    block.style.display = 'none';
+    block.setAttribute('aria-hidden', 'true');
+    block.dataset.visible = 'false';
+
+    if (trigger) {
+        trigger.setAttribute('aria-expanded', 'false');
+    }
 }
 
 // 主题切换功能
