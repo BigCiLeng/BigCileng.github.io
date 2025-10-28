@@ -12,6 +12,7 @@
     <noscript><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"></noscript>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1.9.4/css/academicons.min.css" media="print" onload="this.media='all'">
     <noscript><link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1.9.4/css/academicons.min.css"></noscript>
+    <script src="scripts/news-data.js" defer></script>
     <script src="scripts/functions.js" defer></script>
     <script src="scripts/theme-manager.js" defer></script>
   </head>
@@ -27,10 +28,25 @@
     <div class="page-shell">
       <header class="hero card" id="top">
         <div class="hero-text">
-          <p class="hero-eyebrow">Algorithm Engineer · BAAI</p>
           <h1 class="hero-title">🀁 Nan Wang</h1>
           <p>I build neural rendering and world-model systems at the <strong><a href="https://www.baai.ac.cn/">Beijing Academy of Artificial Intelligence (BAAI)</a></strong>, exploring how photorealistic simulation accelerates VR, robotics, and autonomous driving.</p>
           <p>I earned my M.Sc. in Computer Science from <strong><a href="https://see.tongji.edu.cn/index.htm">Tongji University</a></strong> and collaborate closely with teams across research and industry.</p>
+          <div class="hero-tags" role="list">
+            <span class="hero-tag">Neural Rendering</span>
+            <span class="hero-tag">World Models</span>
+            <span class="hero-tag">3D Vision</span>
+            <!-- <span class="hero-tag">Autonomous Driving</span> -->
+          </div>
+          <ul class="hero-glance">
+            <li>
+              <span class="glance-label">Current</span>
+              <span class="glance-value">Algorithm Engineer · BAAI</span>
+            </li>
+            <li>
+              <span class="glance-label">Focus</span>
+              <span class="glance-value">Simulation · Neural rendering · Robotics</span>
+            </li>
+          </ul>
           <div class="contact-links">
             <a href="mailto:bigcileng@gmail.com" class="contact-link" aria-label="Email Nan Wang">
               <i class="fas fa-envelope" aria-hidden="true"></i>
@@ -44,9 +60,9 @@
               <i class="fab fa-github" aria-hidden="true"></i>
               <span>GitHub</span>
             </a>
-            <a href="https://x.com/bigcileng" class="contact-link" aria-label="X profile">
-              <span class="x-custom-icon" aria-hidden="true">X</span>
-              <span>X</span>
+            <a href="https://twitter.com/bigcileng" class="contact-link" aria-label="Twitter profile">
+              <i class="fab fa-twitter" aria-hidden="true"></i>
+              <span>Twitter</span>
             </a>
           </div>
         </div>
@@ -60,48 +76,56 @@
           <h2>News</h2>
         </div>
         <div class="card news-card">
-          <ul class="news-list">
-            <li>
-              <span class="badge badge-new">2025.09</span>
-              <span>Our <a href="https://bigcileng.github.io/bilateral-driving/">BilateralDriving</a> is accepted to NeurIPS 2025.</span>
-            </li>
-            <li>
-              <span class="badge badge-new">2025.09</span>
-              <span>Our HOLO is accepted to WACV 2026.</span>
-            </li>
-            <li>
-              <span class="badge badge-new">2025.08</span>
-              <span>Our <a href="https://gzwsama.github.io/OnePoseviaGen.github.io/">OnePoseviaGen</a> is accepted to CoRL 2025 as an <strong>Oral</strong>.</span>
-            </li>
-            <li>
-              <span class="badge">2025.06</span>
-              <span><a href="https://bigcileng.github.io/bilateral-driving/">BilateralDriving</a> project page is now live.</span>
-            </li>
-            <li>
-              <span class="badge">2025.02</span>
-              <span>I started an internship at the <a href="https://www.baai.ac.cn/">Beijing Academy of Artificial Intelligence</a>.</span>
-            </li>
-            <li>
-              <span class="badge">2025.02</span>
-              <span>Two papers are accepted to ICRA 2025.</span>
-            </li>
-            <li>
-              <span class="badge">2025.01</span>
-              <span>SGGS is accepted to ICASSP 2025.</span>
-            </li>
-            <li>
-              <span class="badge">2024.10</span>
-              <span>I joined <a href="https://www.noematrix.ai/">Shanghai Noematrix Intelligence Technology Ltd</a> as an intern.</span>
-            </li>
-            <li>
-              <span class="badge">2024.05</span>
-              <span>I joined <a href="https://www.mi.com/cyberone">Xiaomi Robot Technology</a> as an intern.</span>
-            </li>
-            <li>
-              <span class="badge">2024.03</span>
-              <span>I joined <a href="https://www.megvii.com/">Megvii</a> as an intern.</span>
-            </li>
-          </ul>
+          <ul class="news-list" id="news-list"></ul>
+          <div class="news-actions" id="news-actions" hidden>
+            <button type="button" class="button-ghost news-toggle" id="news-toggle" aria-expanded="false">
+              Show all news
+            </button>
+          </div>
+          <noscript>
+            <ul class="news-list">
+              <li class="news-item">
+                <time class="news-date is-new" datetime="2025-09">2025.09</time>
+                <p class="news-text">Our <a href="https://bigcileng.github.io/bilateral-driving/">BilateralDriving</a> is accepted to NeurIPS 2025.</p>
+              </li>
+              <li class="news-item">
+                <time class="news-date is-new" datetime="2025-09">2025.09</time>
+                <p class="news-text">Our HOLO is accepted to WACV 2026.</p>
+              </li>
+              <li class="news-item">
+                <time class="news-date is-new" datetime="2025-08">2025.08</time>
+                <p class="news-text">Our <a href="https://gzwsama.github.io/OnePoseviaGen.github.io/">OnePoseviaGen</a> is accepted to CoRL 2025 as an <strong>Oral</strong>.</p>
+              </li>
+              <li class="news-item">
+                <time class="news-date" datetime="2025-06">2025.06</time>
+                <p class="news-text"><a href="https://bigcileng.github.io/bilateral-driving/">BilateralDriving</a> project page is now live.</p>
+              </li>
+              <li class="news-item">
+                <time class="news-date" datetime="2025-02">2025.02</time>
+                <p class="news-text">I started an internship at the <a href="https://www.baai.ac.cn/">Beijing Academy of Artificial Intelligence</a>.</p>
+              </li>
+              <li class="news-item">
+                <time class="news-date" datetime="2025-02">2025.02</time>
+                <p class="news-text">Two papers are accepted to ICRA 2025.</p>
+              </li>
+              <li class="news-item">
+                <time class="news-date" datetime="2025-01">2025.01</time>
+                <p class="news-text">SGGS is accepted to ICASSP 2025.</p>
+              </li>
+              <li class="news-item">
+                <time class="news-date" datetime="2024-10">2024.10</time>
+                <p class="news-text">I joined <a href="https://www.noematrix.ai/">Shanghai Noematrix Intelligence Technology Ltd</a> as an intern.</p>
+              </li>
+              <li class="news-item">
+                <time class="news-date" datetime="2024-05">2024.05</time>
+                <p class="news-text">I joined <a href="https://www.mi.com/cyberone">Xiaomi Robot Technology</a> as an intern.</p>
+              </li>
+              <li class="news-item">
+                <time class="news-date" datetime="2024-03">2024.03</time>
+                <p class="news-text">I joined <a href="https://www.megvii.com/">Megvii</a> as an intern.</p>
+              </li>
+            </ul>
+          </noscript>
         </div>
       </section>
 
@@ -114,9 +138,7 @@
           <article class="card item-card featured">
             <figure class="media">
               <img src="research/bilateraldriving-demo/bilateraldriving-demo-cover.jpg" alt="BilateralDriving reconstruction preview" class="media-static" loading="lazy">
-              <video class="media-hover" autoplay muted loop playsinline preload="metadata">
-                <source src="research/bilateraldriving-demo/bilateraldriving-demo.mp4" type="video/mp4">
-              </video>
+              <video class="media-hover" autoplay muted loop playsinline preload="none" data-src="research/bilateraldriving-demo/bilateraldriving-demo.mp4"></video>
             </figure>
             <div class="item-content">
               <h3 class="item-title">Unifying Appearance Codes and Bilateral Grids for Driving Scene Gaussian Splatting</h3>
@@ -155,9 +177,7 @@
           <article class="card item-card">
             <figure class="media">
               <img src="research/oneposeviagen/oneposeviagen-demo.png" alt="OnePoseviaGen demo" class="media-static" loading="lazy">
-              <video class="media-hover" autoplay muted loop playsinline preload="metadata">
-                <source src="research/oneposeviagen/oneposeviagen-demo.mp4" type="video/mp4">
-              </video>
+              <video class="media-hover" autoplay muted loop playsinline preload="none" data-src="research/oneposeviagen/oneposeviagen-demo.mp4"></video>
             </figure>
             <div class="item-content">
               <h3 class="item-title">One View, Many Worlds: Single-Image to 3D Object Meets Generative Domain Randomization for One-Shot 6D Pose Estimation</h3>
@@ -188,9 +208,7 @@
           <article class="card item-card">
             <figure class="media">
               <img src="research/saradar-demo/saradar-demo.png" alt="SA-Radar simulation" class="media-static" loading="lazy">
-              <video class="media-hover" autoplay muted loop playsinline preload="metadata">
-                <source src="research/saradar-demo/saradar-demo.mp4" type="video/mp4">
-              </video>
+              <video class="media-hover" autoplay muted loop playsinline preload="none" data-src="research/saradar-demo/saradar-demo.mp4"></video>
             </figure>
             <div class="item-content">
               <h3 class="item-title">Simulate Any Radar: Attribute-Controllable Radar Simulation via Waveform Parameter Embedding</h3>
@@ -217,9 +235,7 @@
           <article class="card item-card">
             <figure class="media">
               <img src="research/orv-demo/orv-demo.png" alt="ORV robot video generation" class="media-static" loading="lazy">
-              <video class="media-hover" autoplay muted loop playsinline preload="metadata">
-                <source src="research/orv-demo/orv-demo.mp4" type="video/mp4">
-              </video>
+              <video class="media-hover" autoplay muted loop playsinline preload="none" data-src="research/orv-demo/orv-demo.mp4"></video>
             </figure>
             <div class="item-content">
               <h3 class="item-title">ORV: 4D Occupancy-centric Robot Video Generation</h3>
@@ -246,9 +262,7 @@
           <article class="card item-card featured">
             <figure class="media">
               <img src="research/pugs-demo/pugs-demo-cover.jpg" alt="PUGS physical understanding" class="media-static" loading="lazy">
-              <video class="media-hover" autoplay muted loop playsinline preload="metadata">
-                <source src="research/pugs-demo/pugs-demo.mp4" type="video/mp4">
-              </video>
+              <video class="media-hover" autoplay muted loop playsinline preload="none" data-src="research/pugs-demo/pugs-demo.mp4"></video>
             </figure>
             <div class="item-content">
               <h3 class="item-title">PUGS: Zero-shot Physical Understanding with Gaussian Splatting</h3>
@@ -371,9 +385,7 @@
           <article class="card item-card featured">
             <figure class="media">
               <img src="research/r2g-demo/r2g-demo-cover.jpg" alt="Real2Sim pipeline" class="media-static" loading="lazy">
-              <video class="media-hover" autoplay muted loop playsinline preload="metadata">
-                <source src="research/r2g-demo/r2g-demo.mp4" type="video/mp4">
-              </video>
+              <video class="media-hover" autoplay muted loop playsinline preload="none" data-src="research/r2g-demo/r2g-demo.mp4"></video>
             </figure>
             <div class="item-content">
               <h3 class="item-title">A Real2Sim Pipeline for Robotics Simulation</h3>
@@ -391,9 +403,7 @@
           <article class="card item-card">
             <figure class="media">
               <img src="research/assist-demo/assist-demo-cover.jpg" alt="AssistGS project" class="media-static" loading="lazy">
-              <video class="media-hover" autoplay muted loop playsinline preload="metadata">
-                <source src="research/assist-demo/assist-demo.mp4" type="video/mp4">
-              </video>
+              <video class="media-hover" autoplay muted loop playsinline preload="none" data-src="research/assist-demo/assist-demo.mp4"></video>
             </figure>
             <div class="item-content">
               <h3 class="item-title">3DGS Implementation for Structured-NeRF: Hierarchical Scene Graph with Neural Representation</h3>

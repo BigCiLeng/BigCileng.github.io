@@ -133,18 +133,189 @@ class ThemeManager {
     }
 }
 
-// 页面加载完成后初始化主题管理器
-document.addEventListener('DOMContentLoaded', () => {
-    window.themeManager = new ThemeManager();
-});
+function renderNewsTimeline(expanded) {
+    var list = document.getElementById('news-list');
+    if (!list) {
+        return;
+    }
 
-// 兼容旧版本浏览器
-if (document.readyState === 'loading') {
-    document.addEventListener('DOMContentLoaded', () => {
-        if (!window.themeManager) {
-            window.themeManager = new ThemeManager();
+    var items = window.NEWS_ITEMS;
+    if (!Array.isArray(items) || !items.length) {
+        list.innerHTML = '';
+        return;
+    }
+
+    var fragment = document.createDocumentFragment();
+
+    var visibleCount = expanded ? items.length : Math.min(items.length, 5);
+
+    items.slice(0, visibleCount).forEach(function (item, index) {
+        if (!item) {
+            return;
         }
+
+        var entry = document.createElement('li');
+        entry.className = 'news-item';
+        if (index < 3) {
+            entry.classList.add('news-item--accent');
+        }
+
+        var time = document.createElement('time');
+        time.className = 'news-date';
+        if (item.date) {
+            time.setAttribute('datetime', item.date);
+        }
+        time.textContent = item.label || item.date || '';
+
+        if (item.isNew) {
+            time.classList.add('is-new');
+        }
+
+        var text = document.createElement('p');
+        text.className = 'news-text';
+        text.innerHTML = item.html || item.text || '';
+
+        entry.appendChild(time);
+        entry.appendChild(text);
+        fragment.appendChild(entry);
     });
+
+    list.innerHTML = '';
+    list.appendChild(fragment);
+}
+
+function initNewsTimeline() {
+    var items = window.NEWS_ITEMS;
+    var total = Array.isArray(items) ? items.length : 0;
+    var actions = document.getElementById('news-actions');
+    var toggle = document.getElementById('news-toggle');
+
+    if (!document.getElementById('news-list')) {
+        return;
+    }
+
+    var state = { expanded: false };
+    var updateToggleLabel = function () {
+        if (!toggle) {
+            return;
+        }
+
+        var hiddenCount = Math.max(total - 5, 0);
+        if (hiddenCount <= 0) {
+            toggle.hidden = true;
+            return;
+        }
+
+        toggle.hidden = false;
+        toggle.dataset.expanded = state.expanded ? 'true' : 'false';
+        toggle.setAttribute('aria-expanded', state.expanded ? 'true' : 'false');
+        toggle.setAttribute('aria-pressed', state.expanded ? 'true' : 'false');
+
+        if (state.expanded) {
+            toggle.textContent = 'Show recent 5';
+            toggle.setAttribute('aria-label', 'Collapse news list to the most recent five updates');
+        } else {
+            toggle.textContent = 'Show all news (' + total + ')';
+            toggle.setAttribute('aria-label', 'Expand to view all ' + total + ' news updates');
+        }
+    };
+
+    renderNewsTimeline(false);
+
+    if (!toggle || total <= 5) {
+        if (actions) {
+            actions.hidden = true;
+        }
+        if (toggle) {
+            toggle.hidden = true;
+        }
+        return;
+    }
+
+    if (actions) {
+        actions.hidden = false;
+    }
+
+    updateToggleLabel();
+
+    toggle.addEventListener('click', function () {
+        state.expanded = !state.expanded;
+        renderNewsTimeline(state.expanded);
+        updateToggleLabel();
+    });
+}
+
+function initLazyMedia() {
+    var videos = Array.prototype.slice.call(document.querySelectorAll('video[data-src]'));
+    if (!videos.length) {
+        return;
+    }
+
+    var loadVideo = function (video) {
+        if (!video || video.dataset.loaded === 'true') {
+            return;
+        }
+
+        var src = video.dataset.src;
+        if (!src) {
+            return;
+        }
+
+        video.src = src;
+        video.load();
+        video.dataset.loaded = 'true';
+        video.removeAttribute('data-src');
+
+        if (typeof video.play === 'function') {
+            var playPromise = video.play();
+            if (playPromise && typeof playPromise.then === 'function') {
+                playPromise.catch(function () { /* ignore autoplay blocks */ });
+            }
+        }
+    };
+
+    var observer = null;
+    if ('IntersectionObserver' in window) {
+        observer = new IntersectionObserver(function (entries) {
+            entries.forEach(function (entry) {
+                if (entry.isIntersecting) {
+                    loadVideo(entry.target);
+                    observer.unobserve(entry.target);
+                }
+            });
+        }, {
+            rootMargin: '120px 0px',
+            threshold: 0.2
+        });
+    }
+
+    videos.forEach(function (video) {
+        if (observer) {
+            observer.observe(video);
+        } else {
+            loadVideo(video);
+        }
+
+        video.addEventListener('mouseenter', function () {
+            loadVideo(video);
+        }, { once: true });
+
+        video.addEventListener('focus', function () {
+            loadVideo(video);
+        }, { once: true });
+    });
+}
+
+function initSiteScripts() {
+    if (!window.themeManager) {
+        window.themeManager = new ThemeManager();
+    }
+    initNewsTimeline();
+    initLazyMedia();
+}
+
+if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', initSiteScripts, { once: true });
 } else {
-    window.themeManager = new ThemeManager();
+    initSiteScripts();
 }
