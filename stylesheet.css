@@ -393,7 +393,7 @@ a:focus-visible {
 
 .item-grid {
   display: grid;
-  gap: 24px;
+  gap: 10px;
   grid-template-columns: minmax(0, 1fr);
 }
 
@@ -436,8 +436,8 @@ a:focus-visible {
 }
 
 .item-card .media {
-  flex: 0 0 clamp(200px, 28vw, 320px);
-  width: clamp(200px, 28vw, 320px);
+  flex: 0 0 clamp(140px, 18vw, 200px);
+  width: clamp(140px, 18vw, 200px);
   max-width: 100%;
   align-self: flex-start;
 }
