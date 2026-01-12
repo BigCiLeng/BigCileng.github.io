@@ -251,6 +251,17 @@ function initLazyMedia() {
         return;
     }
 
+    var playVideo = function (video) {
+        if (!video || typeof video.play !== 'function') {
+            return;
+        }
+
+        var playPromise = video.play();
+        if (playPromise && typeof playPromise.then === 'function') {
+            playPromise.catch(function () { /* ignore autoplay blocks */ });
+        }
+    };
+
     var loadVideo = function (video) {
         if (!video || video.dataset.loaded === 'true') {
             return;
@@ -266,12 +277,7 @@ function initLazyMedia() {
         video.dataset.loaded = 'true';
         video.removeAttribute('data-src');
 
-        if (typeof video.play === 'function') {
-            var playPromise = video.play();
-            if (playPromise && typeof playPromise.then === 'function') {
-                playPromise.catch(function () { /* ignore autoplay blocks */ });
-            }
-        }
+        playVideo(video);
     };
 
     var observer = null;
@@ -294,6 +300,17 @@ function initLazyMedia() {
             observer.observe(video);
         } else {
             loadVideo(video);
+        }
+
+        var container = video.closest('.media');
+        if (container) {
+            container.addEventListener('mouseenter', function () {
+                loadVideo(video);
+            }, { once: true });
+
+            container.addEventListener('focusin', function () {
+                loadVideo(video);
+            }, { once: true });
         }
 
         video.addEventListener('mouseenter', function () {
