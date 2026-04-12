@@ -2,22 +2,40 @@
 
 window.NEWS_ITEMS = Object.freeze([
   {
+    date: '2026-04',
+    label: '2026.04',
+    html: '<a href="https://orangesodahub.github.io/ORV/">ORV</a> and <a href="https://xiaomi-research.github.io/dggt/">DGGT</a> are accepted to CVPR 2026, <a href="https://zhuxing0.github.io/projects/SA-Radar/">SA-Radar</a> is accepted to CVPR 2026 Findings.',
+    isNew: true
+  },
+  {
+    date: '2026-03',
+    label: '2026.03',
+    html: 'I joined <strong>AGIBOT</strong> as a Researcher, working on world simulators and action-conditioned world models for humanoid robots.',
+    isNew: true
+  },
+  {
+    date: '2026-01',
+    label: '2026.01',
+    html: '<a href="https://daniellli.github.io/projects/DKT/">DKT</a> is accepted to ICRA 2026 and <a href="">Gen-NCAP</a> is accepted to IASEAI 2026.',
+    isNew: true
+  },
+  {
     date: '2025-09',
     label: '2025.09',
     html: 'Our <a href="https://bigcileng.github.io/bilateral-driving/">BilateralDriving</a> is accepted to NeurIPS 2025.',
-    isNew: true
+    isNew: false
   },
   {
     date: '2025-09',
     label: '2025.09',
     html: 'Our HOLO is accepted to WACV 2026.',
-    isNew: true
+    isNew: false
   },
   {
     date: '2025-08',
     label: '2025.08',
     html: 'Our <a href="https://gzwsama.github.io/OnePoseviaGen.github.io/">OnePoseviaGen</a> is accepted to CoRL 2025 as an <strong>Oral</strong>.',
-    isNew: true
+    isNew: false
   },
   {
     date: '2025-06',
